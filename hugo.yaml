@@ -3,8 +3,8 @@ baseurl: /
 theme: hugo-graphite
 
 relativeurls: false
-languageCode: en-us
-description: An opinionated collection of R packages designed for data science.
+languageCode: de-DE
+description: "Code for Heilbronn e.V. - Open Data und Open Source für Heilbronn"
 
 ignoreFiles:
 - \.Rmd$
@@ -19,13 +19,6 @@ permalinks:
 taxonomies:
   category: categories
   tag: tags
-
-blackfriday:
-  hrefTargetBlank: true
-  angledQuotes: false
-  latexDashes: true
-  extensions:
-  - backslashLineBreak
 
 markup:
   defaultMarkdownHandler: goldmark
@@ -44,14 +37,16 @@ menus:
   - name: "Home"
     url: /
   - name: "Verein"
-    url: /
+    url: /verein
   - name: Open Data
-    url: /
+    url: /open-data
 
 params:
   colors:
     menu_primary: "#ffffff"
     menu_text: "#000000"
     menu_title_active: "#ff867f"
+
+    link: "#ff867f"
 
     home_section_even: "rgba(255, 133, 127, 0.1)"

@@ -1217,7 +1217,7 @@ em {
     margin-left: 50px; }
   #homeContent .bee1 {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 10px;
     width: 100px;
     height: auto; }

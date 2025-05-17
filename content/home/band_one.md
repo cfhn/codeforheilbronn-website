@@ -15,24 +15,24 @@ col0:
     alt: "Code for Heilbronn e.V."
 col1:
   row2:
-    hex_url: "/badges/badge-103-opendata.png"
+    hex_url: "/badges/badge-104-arduino.png"
     url: "/open-data"
     alt: "Offene Daten für Heilbronn"
   row3:
-    hex_url: "/badges/badge-113-golang-junior.png"
+    hex_url: "/badges/badge-112-lora.png"
     url: "/verein"
     alt: "Code for Heilbronn e.V."
 col2:
   row2:
-    hex_url: "/badges/badge-103-opendata.png"
+    hex_url: "/badges/badge-501-matelight.png"
     url: "/open-data"
     alt: "Offene Daten für Heilbronn"
   row3:
-    hex_url: "/badges/badge-103-opendata.png"
+    hex_url: "/badges/badge-107-git.png"
     url: "/open-data"
     alt: "Offene Daten für Heilbronn"
   row4:
-    hex_url: "/badges/badge-113-golang-junior.png"
+    hex_url: "/badges/badge-003-unicorn.png"
     url: "/verein"
     alt: "Code for Heilbronn e.V."
 ---
