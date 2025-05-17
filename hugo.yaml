@@ -1,0 +1,40 @@
+title: Education
+baseurl: /
+theme: hugo-graphite
+
+relativeurls: false
+languageCode: en-us
+description: An opinionated collection of R packages designed for data science.
+
+ignoreFiles:
+- \.Rmd$
+- _files$
+- _cache$
+
+preserveTaxonomyNames: true
+
+permalinks:
+  blog: blog/:year/:month/:slug/
+
+taxonomies:
+  category: categories
+  tag: tags
+
+blackfriday:
+  hrefTargetBlank: true
+  angledQuotes: false
+  latexDashes: true
+  extensions:
+  - backslashLineBreak
+
+markup:
+  defaultMarkdownHandler: goldmark
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: pygments

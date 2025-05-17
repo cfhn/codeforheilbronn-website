@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/main-site.css">
+<link rel="stylesheet" href="/css/fa5-all.css">
+<style type="text/css">
+    /* Google Fonts */
+
+
+body {
+	background-color: <no value>;
+	color: <no value>;
+}
+
+/* Links */
+
+a {
+  color: <no value>;
+}
+
+a:hover {
+  color: <no value>;
+}
+
+a:focus {
+  outline-color: <no value>;
+}
+
+.column25-left .sectionTitle a:hover:not(.current),
+.column16-left .sectionTitle a:hover:not(.current) { /* Tutorial left sidebar */
+  color: <no value>;
+}
+
+.icon-attribution, 
+.icon-attribution a {
+  color: <no value>;
+  opacity: 75%;
+}
+
+
+/* Landing page content bands */
+
+#homeContent .band.first {
+  background-color: <no value>;
+}
+
+#homeContent .band.second {
+  background-color: <no value>;
+}
+
+#homeContent .band.third {
+  background-color: <no value>;
+}
+
+/* Top navigation bar menu */
+
+#rStudioHeader {
+  background-color: <no value>;
+  color: <no value>;
+}
+
+#rStudioHeader .productName {
+  color: <no value>;
+}
+
+#rStudioHeader .productName:hover,
+#rStudioHeader .productName:focus {
+  color: <no value>;
+}
+
+#rStudioHeader #menu .menuItem.a {
+  background-color: #75aadb;
+  color: <no value>;
+}
+
+#rStudioHeader #menu .menuItem:hover {
+  background-color: <no value>;
+  color: <no value>;
+}
+
+#rStudioHeader #menu .menuItem.current {
+  background-color: <no value>;
+  color: <no value>;
+  text-decoration: <no value>;
+}
+
+/* Footer */
+
+#rStudioFooter.band {
+  background-color: <no value>;
+}
+
+#rStudioFooter .bandContent #copyright {
+  color: <no value>;
+}
+
+/* Tables */
+
+table tbody tr:nth-child(even){
+  background-color: <no value>;
+}
+
+table tbody tr:nth-child(odd){
+  background-color: <no value>;
+}
+
+.latest {
+  border-top: .5em solid <no value>;
+}
+
+
+/* ------Accent Font------- */
+
+
+
+
+
+/* ----Accent color for headers, toc, etc.----- */
+
+
+
+/* Custom colored bullets */
+
+
+
+/* ------Capitalization of Headers------- */
+
+  
+
+/* -----Hexes------*/
+
+
+/*----- Borders------ */
+
+
+
+/*--- Event Stickies ---*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------Test Drive Button-------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+</style>
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.147.2">
+<title>purrr 0.3.0</title>
+<meta property="og:title" content="purrr 0.3.0" />
+<meta property="og:description" content="purrr 0.3.0 is now on CRAN.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/blog/2019/02/purrr-0-3-0/" />
+
+
+
+<meta property="twitter:card" content="summary_large_image">
+
+
+
+
+
+    <meta property="og:title" content="purrr 0.3.0 - Education">
+    <meta property="description" content="purrr 0.3.0 is now on CRAN.
+">
+    <meta property="og:description" content="purrr 0.3.0 is now on CRAN.
+">
+
+    
+    
+    
+    
+    
+    
+        <meta property="og:image" content="//localhost:1313/blog/2019/02/purrr-0-3-0/purrr-0-3-0-sq.jpg" >
+    
+
+    
+    
+    
+    
+        <meta name="twitter:image" content="//localhost:1313/blog/2019/02/purrr-0-3-0/purrr-0-3-0-wd.jpg" >
+    
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/images/favicons/site.webmanifest" />
+<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" />
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" href="/images/favicons/browserconfig.xml" >
+
+
+
+<script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/js/site.js"></script>
+
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico" />
+
+
+  
+<script type="text/javascript" src="/js/clipboard.js"></script>
+
+
+
+
+
+
+  
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+
+  
+
+
+
+
+
+
+
+  <body>
+    <div id="appTidyverseSite" class="shrinkHeader alwaysShrinkHeader">
+      <div id="main">
+        
+        <div id="rStudioHeader">
+          <div class="band">
+            <div class="innards bandContent">
+              <div>
+                <a class="productName" href="/">Education</a>
+                
+              </div>
+              <div id="menu">
+  <div id="menuToggler"></div>
+  <div id="menuItems" class="">
+    
+    
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+</head>
+<body>
+
+
+ 
+
+
+
+
+<div class="band padForHeader pushFooter">
+  <div class="bandContent">
+    <div class="full splitColumns withMobileMargins">
+      <div class="column75">
+
+      <h1 class="article-title">purrr 0.3.0</h1>
+
+      
+      <div class="article-header" aria-hidden="true">
+          
+          <div class="photo">
+          <img src='/blog/2019/02/purrr-0-3-0/purrr-0-3-0-wd.jpg'>
+          </div>
+          
+        
+        <div class="photoCredit">Photo by <a href="https://unsplash.com/photos/NodtnCsLdTE">Mikhail Vasilyev</a>
+        </div>
+        
+      </div>
+
+      
+      <span class="article-date">
+        <i class="fas fa-calendar-day fa-fw"></i>&nbsp;&nbsp;2019/02/06
+      </span>
+      
+      
+          </p>
+      
+      
+      
+      
+        <p style="margin-top: 0.5em;">
+        <i class="fas fa-user-circle fa-fw"></i>&nbsp;
+        
+
+
+
+
+  
+
+  Lionel Henry, Jenny Bryan, Hadley Wickham, Greg
+  
+
+
+
+      
+        </p>
+      
+
+      <div class="article-content">
+      <p>We&rsquo;re excited to announce the release of 
+<a href="https://purrr.tidyverse.org" target="_blank" rel="noopener">purrr</a> 0.3.0! purrr enhances R’s functional programming toolkit by providing a complete and consistent set of tools for working with functions and vectors.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># Install the latest version with:</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">install.packages</span>(<span style="color:#ba2121">&#34;purrr&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># Start working with purrr:</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">library</span>(purrr)
+</span></span></code></pre></div><p>In this release, <code>pluck()</code> gets a few new variants:</p>
+<ul>
+<li>
+<p><code>pluck&lt;-</code>, <code>assign_in()</code> and <code>modify_in()</code> allow deep modifications of nested structures.</p>
+</li>
+<li>
+<p><code>chuck()</code> is a stricter variant of <code>pluck()</code> that consistently fails instead of returning <code>NULL</code> when the structure does not have the expected shape.</p>
+</li>
+</ul>
+<p>A new set of tools helps limiting the rate at which a function is called:</p>
+<ul>
+<li>
+<p><code>slowly()</code> forces a function to sleep between each invokation.</p>
+</li>
+<li>
+<p><code>insistently()</code> automatically invokes a function again on error until it succeeds, and sleeps between invokations.</p>
+</li>
+<li>
+<p>The <code>rate_delay()</code> and <code>rate_backoff()</code> helpers control the invokation rate of <code>slowly()</code> and <code>insistently()</code>.</p>
+</li>
+</ul>
+<p>The reduce and map functions gain a few improvements:</p>
+<ul>
+<li>
+<p><code>map_if()</code> accepts an optional function with the <code>.else</code> parameter. This function is applied on elements for which the predicate is <code>FALSE</code>.</p>
+</li>
+<li>
+<p><code>map_at()</code> now accepts <code>vars()</code> selections. This lets you use selection helpers like <code>dplyr::starts_with()</code> to determine the elements of a list which should be mapped.</p>
+</li>
+<li>
+<p><code>reduce()</code> now supports early termination of a computation. Just return a value wrapped in a <code>done()</code> to signal to <code>reduce()</code> that you&rsquo;re done.</p>
+</li>
+</ul>
+<p>Besides these new functions and tools, purrr 0.3.0 is mostly a polishing release. We have improved the consistency of behaviour:</p>
+<ul>
+<li>
+<p><code>modify()</code> is now a wrapper around <code>[[&lt;-</code> instead of <code>[&lt;-</code>. This makes it compatible with a larger variety of S3 vector classes.</p>
+</li>
+<li>
+<p>Predicate functions (such that you would pass to <code>map_if()</code>) now must return a single <code>TRUE</code> or <code>FALSE</code>. Missing values and integers are no longer valid predicate outputs.</p>
+</li>
+</ul>
+<p>Finally, we improved the consistency of the interface:</p>
+<ul>
+<li>
+<p>The direction of iteration/application is now consistently specified with a <code>.dir</code> argument.</p>
+</li>
+<li>
+<p>Many missing functions were added to fill the gaps: <code>accumulate2()</code>, <code>imodify()</code>, <code>map_depth()</code>, &hellip;</p>
+</li>
+<li>
+<p><code>partial()</code> has a much improved and more flexible interface.</p>
+</li>
+</ul>
+<p>Find a detailed account of the changes in the 
+<a href="https://github.com/tidyverse/purrr/blob/master/NEWS.md#purrr-030" target="_blank" rel="noopener">NEWS</a> file.</p>
+
+
+
+
+<h2 id="new-pluck-variants">New pluck variants
+  <a href="#new-pluck-variants">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h2><p><code>pluck()</code> implements a generalised form of <code>[[</code> that allow you to index deeply and flexibly into data structures. For instance, <code>pluck(x, &quot;foo&quot;, 2)</code> is equivalent to <code>x[[&quot;foo&quot;]][[2]]</code>. You can also supply a default value in case the element does not exist. For instance, <code>pluck(x, &quot;foo&quot;, 2, .default = NA)</code> is equivalent to <code>x[[&quot;foo&quot;]][[2]]</code>, returning an <code>NA</code> if that element doesn&rsquo;t exist. purrr 0.3.0 introduces variants of <code>pluck()</code> to make it easier to work with deep data structures.</p>
+
+
+
+
+<h3 id="pluck-assignment">Pluck assignment
+  <a href="#pluck-assignment">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3><p>This release introduces the new functions <code>pluck&lt;-</code>, <code>assign_in()</code> and <code>modify_in()</code> as assignment variants of <code>pluck()</code>. To illustrate deep assignment, let&rsquo;s create a nested data structure:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>x <span style="color:#666">&lt;-</span> <span style="color:#00f">list</span>(foo <span style="color:#666">=</span> <span style="color:#00f">list</span>(<span style="color:#666">1</span>, <span style="color:#666">2</span>), bar <span style="color:#666">=</span> <span style="color:#00f">list</span>(<span style="color:#666">3</span>, <span style="color:#666">4</span>))
+</span></span><span style="display:flex;"><span><span style="color:#00f">str</span>(x)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ foo:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ bar:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 4</span>
+</span></span></code></pre></div><p>This sort of repeated structure is the kind of data where <code>pluck()</code> shines:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">pluck</span>(x, <span style="color:#ba2121">&#34;foo&#34;</span>, <span style="color:#666">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">pluck</span>(x, <span style="color:#ba2121">&#34;bar&#34;</span>, <span style="color:#666">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 3</span>
+</span></span></code></pre></div><p>You can now use the same syntax to modify the data:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">pluck</span>(x, <span style="color:#ba2121">&#34;foo&#34;</span>, <span style="color:#666">2</span>) <span style="color:#666">&lt;-</span> <span style="color:#666">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">str</span>(x)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ foo:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 100</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ bar:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 4</span>
+</span></span></code></pre></div><p><code>pluck&lt;-</code> also has a functional form that does not modify objects in your environment, but instead returns a modified copy:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>out <span style="color:#666">&lt;-</span> <span style="color:#00f">assign_in</span>(x, <span style="color:#00f">list</span>(<span style="color:#ba2121">&#34;foo&#34;</span>, <span style="color:#666">2</span>), <span style="color:#666">2000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># The object is still the same as before</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">str</span>(x)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ foo:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 100</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ bar:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># The modified data is in `out`</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">str</span>(out)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ foo:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 2000</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ bar:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 4</span>
+</span></span></code></pre></div><p>Finally, <code>modify_in()</code> is a variant of <code>modify()</code> that only changes the pluck location with the result of applying a function:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>out <span style="color:#666">&lt;-</span> <span style="color:#00f">modify_in</span>(x, <span style="color:#00f">list</span>(<span style="color:#ba2121">&#34;foo&#34;</span>, <span style="color:#666">2</span>), as.character)
+</span></span><span style="display:flex;"><span><span style="color:#00f">str</span>(out)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ foo:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : chr &#34;100&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;  $ bar:List of 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt;   ..$ : num 4</span>
+</span></span></code></pre></div>
+
+
+
+<h3 id="stricter-pluck">Stricter pluck()
+  <a href="#stricter-pluck">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3><p>Thanks to Daniel Barnett (@daniel-barnett on Github), <code>pluck()</code> now has a stricter cousin <code>chuck()</code>. Whereas <code>pluck()</code> is very permissive regarding non-existing locations and returns <code>NULL</code> in these cases, and <code>[[</code> inconsistently returns <code>NULL</code>, <code>NA</code>, or throws an error, <code>chuck()</code> fails consistently with informative messages (i.e., it &ldquo;chucks&rdquo; an error message):</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">pluck</span>(<span style="color:#00f">list</span>(<span style="color:#666">1</span>), <span style="color:#ba2121">&#34;foo&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; NULL</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">chuck</span>(<span style="color:#00f">list</span>(<span style="color:#666">1</span>), <span style="color:#ba2121">&#34;foo&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; Error: Index 1 is attempting to pluck from an unnamed vector using a string name</span>
+</span></span></code></pre></div>
+
+
+
+<h2 id="rates">Rates
+  <a href="#rates">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h2><p>Thanks to Richie Cotton (@richierocks) and Ian Lyttle (@ijlyttle), purrr gains a function operator to make a function call itself repeatedly when an error occurs.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>counter <span style="color:#666">&lt;-</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f <span style="color:#666">&lt;-</span> <span style="color:#008000;font-weight:bold">function</span>(<span style="color:#008000;font-weight:bold">...</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#008000;font-weight:bold">if</span> (counter <span style="color:#666">&lt;</span> <span style="color:#666">2</span>) {
+</span></span><span style="display:flex;"><span>    counter <span style="color:#666">&lt;&lt;-</span> counter <span style="color:#666">+</span> <span style="color:#666">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">stop</span>(<span style="color:#ba2121">&#34;tilt!&#34;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ba2121">&#34;result&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">f</span>()
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; Error in f(): tilt!</span>
+</span></span></code></pre></div><p>If the function is wrapped with <code>insistently()</code>, it will try a few times before giving up:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># Reset counter</span>
+</span></span><span style="display:flex;"><span>counter <span style="color:#666">&lt;-</span> <span style="color:#666">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f2 <span style="color:#666">&lt;-</span> <span style="color:#00f">insistently</span>(f)
+</span></span><span style="display:flex;"><span><span style="color:#00f">f2</span>()
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;result&#34;</span>
+</span></span></code></pre></div><p>Another rate limiting function is <code>slowly()</code>. While <code>insistently()</code> loops by itself, <code>slowly()</code> is designed to be used in your own loops, for instance in a map iteration:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>f <span style="color:#666">&lt;-</span> <span style="color:#008000;font-weight:bold">function</span>(<span style="color:#008000;font-weight:bold">...</span>) <span style="color:#00f">print</span>(<span style="color:#00f">Sys.time</span>())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">walk</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">3</span>, f)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:03 PST&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:03 PST&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:03 PST&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">walk</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">3</span>, <span style="color:#00f">slowly</span>(f))
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:03 PST&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:04 PST&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:05 PST&#34;</span>
+</span></span></code></pre></div><p><code>slowly()</code> uses a constant rate by default while <code>insistently()</code> uses a backoff rate. The rate limiting can be configured with optional jitter via <code>rate_backoff()</code> and <code>rate_delay()</code>, which implement exponential backoff rate and constant rate respectively.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">walk</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">3</span>, <span style="color:#00f">slowly</span>(f, <span style="color:#00f">rate_backoff</span>(<span style="color:#666">2</span>, max_times <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">Inf</span>)))
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:05 PST&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:07 PST&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;2019-03-06 12:50:10 PST&#34;</span>
+</span></span></code></pre></div>
+
+
+
+<h2 id="map-and-reduce-improvements">Map and reduce improvements
+  <a href="#map-and-reduce-improvements">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h2>
+
+
+
+<h3 id="map_if-or-else"><code>map_if()</code>&hellip; or else?
+  <a href="#map_if-or-else">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3><p>If you like using <code>map_if()</code>, perhaps you&rsquo;ll find the new <code>.else</code> argument useful. <code>.else</code> is a function applied to elements for which the predicate is <code>FALSE</code>:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">map_if</span>(iris, is.numeric, mean, .else <span style="color:#666">=</span> nlevels)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $Sepal.Length</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 5.843333</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $Sepal.Width</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 3.057333</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $Petal.Length</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 3.758</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $Petal.Width</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 1.199333</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $Species</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 3</span>
+</span></span></code></pre></div>
+
+
+
+<h3 id="new-map_at-features">New <code>map_at()</code> features
+  <a href="#new-map_at-features">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3><p>Colin Fay (@ColinFay) has added support for tidyselect expressions to <code>map_at()</code> and other <code>_at</code> mappers. This brings the interface of these functions closer to scoped functions from the dplyr package, such as <code>dplyr::mutate_at()</code>. Note that <code>vars()</code> is currently not reexported from purrr, so you need to use <code>dplyr::vars()</code> or <code>ggplot2::vars()</code> for the time being.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">suppressMessages</span>(<span style="color:#00f">library</span>(<span style="color:#ba2121">&#34;dplyr&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x <span style="color:#666">&lt;-</span> <span style="color:#00f">list</span>(
+</span></span><span style="display:flex;"><span>  foo <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">5</span>,
+</span></span><span style="display:flex;"><span>  bar <span style="color:#666">=</span> <span style="color:#666">6</span><span style="color:#666">:</span><span style="color:#666">10</span>,
+</span></span><span style="display:flex;"><span>  baz <span style="color:#666">=</span> <span style="color:#666">11</span><span style="color:#666">:</span><span style="color:#666">15</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">map_at</span>(x, <span style="color:#00f">vars</span>(<span style="color:#00f">starts_with</span>(<span style="color:#ba2121">&#34;b&#34;</span>)), mean)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $foo</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 1 2 3 4 5</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $bar</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 8</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $baz</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 13</span>
+</span></span></code></pre></div><p><code>map_at()</code> now also supports negative selections:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">map_at</span>(x, <span style="color:#666">-2</span>, `*`, <span style="color:#666">1000</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $foo</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 1000 2000 3000 4000 5000</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $bar</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1]  6  7  8  9 10</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $baz</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 11000 12000 13000 14000 15000</span>
+</span></span></code></pre></div>
+
+
+
+<h3 id="early-termination-of-reduction">Early termination of reduction
+  <a href="#early-termination-of-reduction">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3><p><code>reduce()</code> is an operation that combines the elements of a vector into a single value by calling a binary function repeatedly with the result so far and the next input of a vector. <code>reduce()</code> and its variant <code>accumulate()</code> now support early termination of the reduction. To halt the computation, just return the last value wrapped in a <code>done()</code> box:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># This computes the total sum of the input vector</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">reduce</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">100</span>, <span style="color:#666">~</span> .x <span style="color:#666">+</span> .y)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 5050</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># This stops as soon as the sum is greater than 50</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">reduce</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">100</span>, <span style="color:#666">~</span> <span style="color:#008000;font-weight:bold">if</span> (.x <span style="color:#666">&gt;</span> <span style="color:#666">50</span>) <span style="color:#00f">done</span>(.x) <span style="color:#008000;font-weight:bold">else</span> .x <span style="color:#666">+</span> .y)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 55</span>
+</span></span></code></pre></div><p>This feature takes inspiration from the 
+<a href="https://clojuredocs.org/clojure.core/reduced" target="_blank" rel="noopener">Clojure</a> language.</p>
+
+
+
+
+<h2 id="consistency">Consistency
+  <a href="#consistency">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h2><p>In this polishing release, a lot of effort went towards consistency of behaviour and of the interface.</p>
+
+
+
+
+<h3 id="behaviour">Behaviour
+  <a href="#behaviour">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3>
+
+
+
+<h4 id="better-support-for-s3-vectors">Better support for S3 vectors
+  <a href="#better-support-for-s3-vectors">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h4><p>We are working hard on improving support for S3 vectors in the tidyverse. As of this release, <code>modify()</code> is now a wrapper around <code>[[&lt;-</code> instead of <code>[&lt;-</code>. This should make it directly compatible with a larger set of vector classes. Thanks to the work of Mikko Marttila (@mikmart), <code>pmap()</code> and <code>pwalk()</code> also do a better job of preserving S3 classes. Finally, <code>pluck()</code> now properly calls the <code>[[</code> methods of S3 objects.</p>
+<p>In the next version of purrr, we plan to use the in-development vctrs package to provide more principled and predictable vector operations. This should help us preserve the class and properties of S3 vectors like factors, dates, or your custom classes.</p>
+
+
+
+
+<h4 id="stricter-predicate-checking">Stricter predicate checking
+  <a href="#stricter-predicate-checking">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h4><p>purrr now checks the results of your predicate functions, which must now consistently return <code>TRUE</code> or <code>FALSE</code>. We no longer offer support for <code>NA</code> or for boolish numeric values (R normally interprets 0 as <code>FALSE</code> and all other values as <code>TRUE</code>). The purpose of this change is to detect errors earlier with a more relevant error message.</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">keep</span>(<span style="color:#00f">c</span>(<span style="color:#666">1</span>, <span style="color:#008000;font-weight:bold">NA</span>, <span style="color:#666">3</span>), <span style="color:#666">~</span> . <span style="color:#666">%%</span> <span style="color:#666">2</span> <span style="color:#666">==</span> <span style="color:#666">0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; Error: Predicate functions must return a single `TRUE` or `FALSE`, not a missing value</span>
+</span></span></code></pre></div>
+
+
+
+<h3 id="interface">Interface
+  <a href="#interface">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h3>
+
+
+
+<h4 id="direction-of-application">Direction of application
+  <a href="#direction-of-application">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h4><p>The direction of application is now specified the same way across purrr functions. <code>reduce()</code>, <code>compose()</code> and <code>detect()</code> now have a <code>.dir</code> parameter that can take the value <code>&quot;forward&quot;</code> or <code>&quot;backward&quot;</code>. This terminology should be less ambiguous than &ldquo;left&rdquo; and &ldquo;right&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#00f">reduce</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">4</span>, `-`, .dir <span style="color:#666">=</span> <span style="color:#ba2121">&#34;backward&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">compose</span>(foo, bar, .dir <span style="color:#666">=</span> <span style="color:#ba2121">&#34;forward&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">detect</span>(<span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">5</span>, <span style="color:#666">~</span> . <span style="color:#666">%%</span> <span style="color:#666">2</span> <span style="color:#666">==</span> <span style="color:#666">0</span>, .dir <span style="color:#666">=</span> <span style="color:#ba2121">&#34;backward&#34;</span>)
+</span></span></code></pre></div><p>Note that the backward version of <code>reduce()</code> (called right-reduce in the literature) applies the reduced function in a slightly different way than <code>reduce_right()</code>. The new algorithm is more consistent with how this operation is usually defined in other languages.</p>
+<p>Following the introduction of the <code>.dir</code> parameters, the <code>_right</code> variants such as <code>reduce_right()</code> have been soft-deprecated, as well as the <code>.right</code> parameter of <code>detect()</code> and <code>detect_index()</code>.</p>
+
+
+
+
+<h4 id="partial">partial()
+  <a href="#partial">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h4><p><code>partial()</code> has been rewritten to be a simple wrapper around <code>call_modify()</code> and <code>eval_tidy()</code> from the rlang package. Consequently, the <code>.env</code>, <code>.lazy</code> and <code>.first</code> arguments are soft-deprecated and replaced by a flexible syntax.</p>
+<p>To control the timing of evaluation, unquote the partialised arguments that should be evaluated only once when the function is created. The non-unquoted arguments are evaluated at each invokation of the function:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>my_list <span style="color:#666">&lt;-</span> <span style="color:#00f">partial</span>(list, lazy <span style="color:#666">=</span> <span style="color:#00f">rnorm</span>(<span style="color:#666">3</span>), eager <span style="color:#666">=</span> <span style="color:#666">!!</span><span style="color:#00f">rnorm</span>(<span style="color:#666">3</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">my_list</span>()
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $lazy</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1]  0.2945451  0.3897943 -1.2080762</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $eager</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] -0.1842525 -1.3713305 -0.5991677</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">my_list</span>()
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $lazy</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] -0.3636760 -1.6266727 -0.2564784</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; $eager</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] -0.1842525 -1.3713305 -0.5991677</span>
+</span></span></code></pre></div><p>You can also control the position of the future arguments by passing an empty <code>... = </code> parameter. This syntax is powered by <code>rlang::call_modify()</code> and allows you to add or move dots in a quoted function call. In the case of <code>partial()</code>, the dots represent the future arguments. We use this syntax in the following snippet to position the future arguments right between two partialised arguments:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>my_list <span style="color:#666">&lt;-</span> <span style="color:#00f">partial</span>(list, <span style="color:#666">1</span>, <span style="color:#008000;font-weight:bold">...</span> <span style="color:#666">=</span> , <span style="color:#666">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">my_list</span>()
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [[1]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [[2]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">my_list</span>(<span style="color:#ba2121">&#34;foo&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [[1]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [[2]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] &#34;foo&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; </span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [[3]]</span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 2</span>
+</span></span></code></pre></div>
+
+
+
+<h4 id="exec-replaces-invoke"><code>exec()</code> replaces <code>invoke()</code>
+  <a href="#exec-replaces-invoke">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h4><p>We are retiring <code>invoke()</code> and <code>invoke_map()</code> in favour of <code>exec()</code>. Retirement means that we&rsquo;ll keep these functions indefinitely in the package, but we won&rsquo;t add features or recommend using them.</p>
+<p>We are now favouring <code>exec()</code>, which uses the tidy dots syntax for passing lists of arguments:</p>
+<div class="highlight"><pre tabindex="0" style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># Before:</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">invoke</span>(mean, <span style="color:#00f">list</span>(na.rm <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">TRUE</span>), x <span style="color:#666">=</span> <span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">10</span>)
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 5.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic"># After</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">exec</span>(mean, <span style="color:#666">1</span><span style="color:#666">:</span><span style="color:#666">10</span>, <span style="color:#666">!!!</span><span style="color:#00f">list</span>(na.rm <span style="color:#666">=</span> <span style="color:#008000;font-weight:bold">TRUE</span>))
+</span></span><span style="display:flex;"><span><span style="color:#408080;font-style:italic">#&gt; [1] 5.5</span>
+</span></span></code></pre></div>
+
+
+
+<h4 id="filling-the-missing-parts">Filling the missing parts
+  <a href="#filling-the-missing-parts">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h4><ul>
+<li>
+<p>purrr 0.3.0 introduces <code>accumulate2()</code>, <code>modify2()</code> and <code>imodify()</code> variants.</p>
+</li>
+<li>
+<p>By popular request, <code>at_depth()</code> is back as <code>map_depth()</code>. Unlike <code>modify_depth()</code> which preserves the class structure of the input tree, this variant only returns trees made of lists of lists (up to the given depth), coercing vectors if needed.</p>
+</li>
+</ul>
+
+
+
+
+<h2 id="thanks">Thanks!
+  <a href="#thanks">
+    <svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg>
+  </a>
+</h2><p>Thanks to all the contributors for this release!</p>
+<p>
+<a href="https://github.com/ArtemSokolov" target="_blank" rel="noopener">＠ArtemSokolov</a>, 
+<a href="https://github.com/batpigandme" target="_blank" rel="noopener">＠batpigandme</a>, 
+<a href="https://github.com/bbrewington" target="_blank" rel="noopener">＠bbrewington</a>, 
+<a href="https://github.com/billdenney" target="_blank" rel="noopener">＠billdenney</a>, 
+<a href="https://github.com/cderv" target="_blank" rel="noopener">＠cderv</a>, 
+<a href="https://github.com/cfhammill" target="_blank" rel="noopener">＠cfhammill</a>, 
+<a href="https://github.com/ColinFay" target="_blank" rel="noopener">＠ColinFay</a>, 
+<a href="https://github.com/dan-reznik" target="_blank" rel="noopener">＠dan-reznik</a>, 
+<a href="https://github.com/daniel-barnett" target="_blank" rel="noopener">＠daniel-barnett</a>, 
+<a href="https://github.com/danilinares" target="_blank" rel="noopener">＠danilinares</a>, 
+<a href="https://github.com/drtjc" target="_blank" rel="noopener">＠drtjc</a>, 
+<a href="https://github.com/egnha" target="_blank" rel="noopener">＠egnha</a>, 
+<a href="https://github.com/Eluvias" target="_blank" rel="noopener">＠Eluvias</a>, 
+<a href="https://github.com/flying-sheep" target="_blank" rel="noopener">＠flying-sheep</a>, 
+<a href="https://github.com/gergness" target="_blank" rel="noopener">＠gergness</a>, 
+<a href="https://github.com/gvwilson" target="_blank" rel="noopener">＠gvwilson</a>, 
+<a href="https://github.com/hadley" target="_blank" rel="noopener">＠hadley</a>, 
+<a href="https://github.com/hammer" target="_blank" rel="noopener">＠hammer</a>, 
+<a href="https://github.com/ijlyttle" target="_blank" rel="noopener">＠ijlyttle</a>, 
+<a href="https://github.com/ilarischeinin" target="_blank" rel="noopener">＠ilarischeinin</a>, 
+<a href="https://github.com/IndrajeetPatil" target="_blank" rel="noopener">＠IndrajeetPatil</a>, 
+<a href="https://github.com/ISPritchin" target="_blank" rel="noopener">＠ISPritchin</a>, 
+<a href="https://github.com/jameslairdsmith" target="_blank" rel="noopener">＠jameslairdsmith</a>, 
+<a href="https://github.com/jameslamb" target="_blank" rel="noopener">＠jameslamb</a>, 
+<a href="https://github.com/jrnold" target="_blank" rel="noopener">＠jrnold</a>, 
+<a href="https://github.com/kcf-jackson" target="_blank" rel="noopener">＠kcf-jackson</a>, 
+<a href="https://github.com/leungi" target="_blank" rel="noopener">＠leungi</a>, 
+<a href="https://github.com/lionel-" target="_blank" rel="noopener">＠lionel-</a>, 
+<a href="https://github.com/loladze" target="_blank" rel="noopener">＠loladze</a>, 
+<a href="https://github.com/maxheld83" target="_blank" rel="noopener">＠maxheld83</a>, 
+<a href="https://github.com/mikmart" target="_blank" rel="noopener">＠mikmart</a>, 
+<a href="https://github.com/MilesMcBain" target="_blank" rel="noopener">＠MilesMcBain</a>, 
+<a href="https://github.com/moodymudskipper" target="_blank" rel="noopener">＠moodymudskipper</a>, 
+<a href="https://github.com/mrstlee" target="_blank" rel="noopener">＠mrstlee</a>, 
+<a href="https://github.com/namelessjon" target="_blank" rel="noopener">＠namelessjon</a>, 
+<a href="https://github.com/r-cheologist" target="_blank" rel="noopener">＠r-cheologist</a>, 
+<a href="https://github.com/randomgambit" target="_blank" rel="noopener">＠randomgambit</a>, 
+<a href="https://github.com/rmflight" target="_blank" rel="noopener">＠rmflight</a>, 
+<a href="https://github.com/roumail" target="_blank" rel="noopener">＠roumail</a>, 
+<a href="https://github.com/Ryo-N7" target="_blank" rel="noopener">＠Ryo-N7</a>, 
+<a href="https://github.com/serina-robinson" target="_blank" rel="noopener">＠serina-robinson</a>, 
+<a href="https://github.com/skaltman" target="_blank" rel="noopener">＠skaltman</a>, 
+<a href="https://github.com/suraggupta" target="_blank" rel="noopener">＠suraggupta</a>, 
+<a href="https://github.com/thays42" target="_blank" rel="noopener">＠thays42</a>, 
+<a href="https://github.com/tyluRp" target="_blank" rel="noopener">＠tyluRp</a>, 
+<a href="https://github.com/tzakharko" target="_blank" rel="noopener">＠tzakharko</a>, 
+<a href="https://github.com/VincentGuyader" target="_blank" rel="noopener">＠VincentGuyader</a>, 
+<a href="https://github.com/wlandau" target="_blank" rel="noopener">＠wlandau</a>, 
+<a href="https://github.com/wmayner" target="_blank" rel="noopener">＠wmayner</a>, 
+<a href="https://github.com/yanxianl" target="_blank" rel="noopener">＠yanxianl</a>, 
+<a href="https://github.com/yutannihilation" target="_blank" rel="noopener">＠yutannihilation</a>, and 
+<a href="https://github.com/yysh12" target="_blank" rel="noopener">＠yysh12</a></p>
+
+      </div>
+
+
+      
+
+      </div> 
+      
+      <div class="column25">
+        <div class="section hideOnMobile">
+          
+          <div class="sectionTitle">Contents</div>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#new-pluck-variants">New pluck variants</a></li>
+    <li><a href="#rates">Rates</a></li>
+    <li><a href="#map-and-reduce-improvements">Map and reduce improvements</a></li>
+    <li><a href="#consistency">Consistency</a></li>
+    <li><a href="#thanks">Thanks!</a></li>
+  </ul>
+</nav>
+          
+        </div>
+        <div class="section">
+          
+
+
+
+
+
+        </div>
+      </div> 
+
+    </div> 
+  </div>  
+</div> 
+
+
+
+        <div id="rStudioFooter" class="band">
+          <div class="bandContent">
+            <div id="copyright">
+              
+              
+            </div>
+            <div id="logos">
+              <a href="" class="footerLogo gitHub" aria-label="Tidyverse GitHub organization"></a>
+              <a href="" class="footerLogo twitter" aria-label="rstats hashtag on twitter.com"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>  
+    </div>  
+
+    
+
+
+
+
+<script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+
+
+
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+
+  </body>
+</html>
+
+</body>
+</html>
