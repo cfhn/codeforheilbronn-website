@@ -1,4 +1,4 @@
-title: Education
+title: Code for Heilbronn e.V.
 baseurl: /
 theme: hugo-graphite
 
@@ -38,3 +38,20 @@ markup:
       unsafe: true
   highlight:
     style: pygments
+
+menus:
+  main:
+  - name: "Home"
+    url: /
+  - name: "Verein"
+    url: /
+  - name: Open Data
+    url: /
+
+params:
+  colors:
+    menu_primary: "#ffffff"
+    menu_text: "#000000"
+    menu_title_active: "#ff867f"
+
+    home_section_even: "rgba(255, 133, 127, 0.1)"

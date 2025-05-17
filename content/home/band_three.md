@@ -1,8 +1,8 @@
 ---
-title: "Need help?"
+title: "Want more?"
 image: "images/bee1.jpg"
 ---
 
-First learn how to make a [reprex](/help/#reprex) then [share it](/help/#where-to-ask) with others.
+Besuche uns beim Coding Abend an jedem Donnertstag ab 18:30 Uhr im Maker Space in der experimenta in Heilbronn. 
 
    
