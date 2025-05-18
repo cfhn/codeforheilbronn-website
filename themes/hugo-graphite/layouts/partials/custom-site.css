@@ -6,6 +6,12 @@ body {
 	color: {{ .Param "colors.text" }};
 }
 
+.article-header {
+  margin-bottom: 1rem;
+}
+
+
+
 /* Links */
 
 a {
@@ -89,6 +95,9 @@ a:focus {
 }
 
 /* Tables */
+table {
+  max-width: unset;
+}
 
 table tbody tr:nth-child(even){
   background-color: {{ .Param "colors.table_row_even" }};

@@ -7,7 +7,15 @@ announce: true
 description: >
   Die gröte Maker Faire in Europa. Und wir sind wieder mit dabei.
 event_url: "/events/makerfaire-2025/"
-location: "Hannover, Germany"
+feature_image: /events/makerfaire-2025/makerfaire.png
+location:
+  name: Congress Centrum Hannover
+  address:
+    street: "Theodor-Heuss-Platz 1-3"
+    locality: "Hannover"
+    postal_code: "30175"
+    region: "Niedersachsen"
+    country: "Germany"
 educators:
   - Maker Faire
 ---
