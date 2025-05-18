@@ -11,12 +11,14 @@ body {
 }
 
 
-.hex-badge {
-  animation-duration: 0.5s;
-  zoom: 1;
+.hexBadges img {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1,1);
+  transform-origin: center center;
 }
-.hex-badge:hover{
-  zoom: 1.2;
+.hexBadges img:hover{
+  transform: scale(1.2,1.2);
+  z-index: 100;
 }
 
 
