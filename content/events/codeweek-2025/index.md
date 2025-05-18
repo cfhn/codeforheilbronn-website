@@ -11,7 +11,7 @@ feature_image: "codeweek.png"
 location:
   name: "Maker Space Heilbronn"
   address:
-    street: "Kaiserstraße 26"
+    street: "experimentaplatz 1"
     locality: "Heilbronn"
     postal_code: "74072"
     region: "Baden-Württemberg"

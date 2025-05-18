@@ -11,6 +11,14 @@ body {
 }
 
 
+.hex-badge {
+  animation-duration: 0.5s;
+  zoom: 1;
+}
+.hex-badge:hover{
+  zoom: 1.2;
+}
+
 
 /* Links */
 

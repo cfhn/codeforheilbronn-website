@@ -7,7 +7,14 @@ announce: false
 description: >
   The conference for all things R and RStudio.
 event_url: "https://www.rstudio.com/conference/"
-location: "San Diego, CA"
+location:
+  name: Hochschule Heilbronn
+  address:
+    street: Max-Planck-Str. 39
+    locality: Heilbronn
+    postal_code: 74081
+    region: Baden-Württemberg
+    country: Germany
 educators:
   - Mine
   - Garrett
