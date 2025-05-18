@@ -40,6 +40,8 @@ menus:
     url: /verein
   - name: Open Data
     url: /open-data
+  - name: Blog
+    url: /blog
 
 params:
   colors:
