@@ -1,0 +1,54 @@
+title: Code for Heilbronn e.V.
+baseurl: /
+theme: hugo-graphite
+
+relativeurls: false
+languageCode: de-DE
+description: "Code for Heilbronn e.V. - Open Data und Open Source für Heilbronn"
+
+ignoreFiles:
+- \.Rmd$
+- _files$
+- _cache$
+
+preserveTaxonomyNames: true
+
+permalinks:
+  blog: blog/:year/:month/:slug/
+
+taxonomies:
+  category: categories
+  tag: tags
+
+markup:
+  defaultMarkdownHandler: goldmark
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: pygments
+
+menus:
+  main:
+  - name: "Verein"
+    url: /verein
+  - name: Open Data
+    url: /open-data
+  - name: Blog
+    url: /blog
+  - name: Events
+    url: /events
+
+params:
+  colors:
+    menu_primary: "#ffffff"
+    menu_text: "#000000"
+    menu_title_active: "#ff867f"
+
+    link: "#ff867f"
+
+    home_section_even: "rgba(255, 133, 127, 0.1)"
