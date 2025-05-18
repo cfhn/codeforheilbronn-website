@@ -34,14 +34,14 @@ markup:
 
 menus:
   main:
-  - name: "Home"
-    url: /
   - name: "Verein"
     url: /verein
   - name: Open Data
     url: /open-data
   - name: Blog
     url: /blog
+  - name: Events
+    url: /events
 
 params:
   colors:

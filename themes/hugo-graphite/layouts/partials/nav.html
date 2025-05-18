@@ -6,7 +6,7 @@
       {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
       {{ $active = or $active (eq $page.Section (trim .URL "/")) }}
       {{ $active = or $active (eq $page.RelPermalink .URL ) }}
-    <a class="menuItem {{ if $active }}current{{ end }}" href="{{ .URL }}">{{- .Pre -}}{{ .Name | safeHTML }}{{- .Post -}}</a>
+    <a class="menuItem {{ if $active }}current{{ end }}" href="{{ .URL }}" title="{{ .Name | safeHTML }}">{{- .Pre -}}{{ .Name | safeHTML }}{{- .Post -}}</a>
     {{ end }}
   </div>
 </div>
