@@ -1,18 +1,40 @@
 {{ define "main" }}
 
-<div class="band padForHeader">
-      {{ .Content }}
-</div>
-
 <div class="band padForHeader pushFooter">
-  <center>
-  <h1>{{ .Title | markdownify }}</h1>
-    {{ partial "calendar.html" . }}
-    {{ $show_archive := $.Site.Params.events.link_archive | default true }}
-    {{ if $show_archive }}
-      <div><a href="{{ "/events/archive" | relURL }}">View past events here</a></div>
-    {{ end }}
-  </center>
-</div> <!-- band -->
+  <div class="bandContent">
+    <div class="full splitColumns withMobileMargins">
+      <div class="column75">
+        {{ .Content }}
+
+        <div>
+
+          {{ partial "calendar.html" . }}
+        {{ $show_archive := $.Site.Params.events.link_archive | default true }}
+        </div>
+      </div>
+
+      <div class="column25">
+        <div class="section">
+          <div class="sectionTitle"><a href="#">Coding Abend</a></div>
+      
+          <div class="event">
+            <div class="eventTitle"><a href="{{ .Params.event_url }}">Jeden Donnerstag</a></div>
+            <div class="eventDetails">
+              Offener Abend für alle, die Lust haben, an ihren Projekten zu arbeiten.
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="eventTitle"><a href="{{ .Params.event_url }}">Und Jeden ersten Donnerstag im Monat</a></div>
+            <div class="eventDetails">
+              Ist Premium-Coding Abend. Hier gibt es neben spannenden Themen und kurzen Vorstellungen
+              auch noch gemeinsames Essen und Trinken.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {{ end }}

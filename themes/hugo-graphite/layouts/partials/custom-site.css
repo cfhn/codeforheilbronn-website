@@ -6,6 +6,22 @@ body {
 	color: {{ .Param "colors.text" }};
 }
 
+.article-header {
+  margin-bottom: 1rem;
+}
+
+
+.hexBadges img {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1,1);
+  transform-origin: center center;
+}
+.hexBadges img:hover{
+  transform: scale(1.2,1.2);
+  z-index: 100;
+}
+
+
 /* Links */
 
 a {
@@ -89,6 +105,9 @@ a:focus {
 }
 
 /* Tables */
+table {
+  max-width: unset;
+}
 
 table tbody tr:nth-child(even){
   background-color: {{ .Param "colors.table_row_even" }};
