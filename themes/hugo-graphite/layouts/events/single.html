@@ -39,7 +39,7 @@
         ],
         {{ end }}
       
-        "description": "The Adventures of Kira and Morrison is coming to Snickertown in a can't miss performance.",
+        "description": "{{ with .Params.description }}{{ . | markdownify }}{{ end }}",
     }
     </script>
 

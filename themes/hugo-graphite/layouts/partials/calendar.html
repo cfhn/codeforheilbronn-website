@@ -17,10 +17,8 @@
         <td>{{ partial "pretty_date_ranges" . }}</td>
         <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
         <td>
-          {{ if .Params.location }}
           {{ with .Params.location }}
             {{ .name  }}
-          {{ end }}
           {{ end }}
         </td>
         <td>{{- range .Params.educators }}
