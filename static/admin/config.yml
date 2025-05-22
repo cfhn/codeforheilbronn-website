@@ -3,7 +3,7 @@ backend:
   repo: cfhn/codeforheilbronn-website
   branch: main
   squash_merges: true
-  base_url: "http://localhost:1314"
+  base_url: "https://cmsauth.codeforheilbronn.de"
 
 publish_mode: editorial_workflow
 media_folder: "static/media"
