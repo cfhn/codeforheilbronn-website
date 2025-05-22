@@ -1,0 +1,71 @@
+backend:
+  name: github
+  repo: cfhn/codeforheilbronn-website
+  branch: main
+  squash_merges: true
+  base_url: "http://localhost:1314"
+
+publish_mode: editorial_workflow
+media_folder: "static/media"
+public_folder: "/media"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: frontmatter
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Authors", name: "authors", widget: "string", required: false }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Feature Image", name: "feature_image", widget: "image", required: false }
+    index_file:
+      name: _index
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Copy Clipboard enabled", name: "copy_clipboard", widget: "hidden", default: true }
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    path: '{{slug}}/index'
+    create: true
+    format: frontmatter
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "event" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Start Date", name: "date", widget: "datetime" }
+      - { label: "End Date", name: "date_end", widget: "datetime", required: false }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Summary", name: "description", widget: "text" }
+      - { label: "Feature Image", name: "feature_image", widget: "image", required: false }
+      - { label: "Announce", name: "announce", widget: "boolean", required: false }
+      - { label: "Event URL", name: "event_url", widget: "string", pattern: ["/^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$/", "Must be a valid URL"],  required: false }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Geolocation", "name": "geo_location", widget: "map", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+    index_file:
+      name: _index
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "ICS-File-URL", name: "ics", widget: "string"}
+        - { label: "Web-Calendar-URL", name: "webcalendar", widget: "string"}
+        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+    index_file:
+      name: _index

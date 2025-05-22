@@ -5,3 +5,4 @@ public/
 .vscode/
 .idea/
 *.iml
+static/admin/sveltia-cms.js
