@@ -22,7 +22,7 @@
                 "addressLocality": "{{ .locality }}",
                 "postalCode": "{{ .postal_code }}",
                 {{ if .region}}
-                    "addressRegion": "{{ .region }}"
+                    "addressRegion": "{{ .region }}"{{if .country }},{{ end }}
                 {{ end }}
                 
                 {{ if .country}}
