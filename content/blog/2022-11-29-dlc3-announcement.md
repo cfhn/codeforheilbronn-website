@@ -3,7 +3,7 @@ layout: event
 title: Dezentraler Lokaler Chaos Communication Congress DLC3
 description: C3Wesen aus Heilbronn und Umgebung treffen sich vom 27.12.-30.12. in der 42 Heibronn bei Streams, Bar und Hackcenter.
 tags: [ccc]
-feature_image: /uploads/post_media/02-hackcenter.jpg
+feature_image: /post_media/02-hackcenter.jpg
 
 category: Einladung
 registration: TBD

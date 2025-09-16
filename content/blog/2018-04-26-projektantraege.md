@@ -3,7 +3,7 @@ layout: event
 title: Projekte bei Code For Heilbronn
 description: 
 tags: [projekte]
-feature_image: /uploads/post_media/2018-04-26-projektantraege.jpg
+feature_image: /post_media/2018-04-26-projektantraege.jpg
 
 category: Projekte
 date: 2018-04-26

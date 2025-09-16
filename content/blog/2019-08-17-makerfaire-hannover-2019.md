@@ -16,7 +16,7 @@ Beim FTS handelt es sich um einen flachen Roboter mit ca 1,2 KW Motorleistung. A
 
 Außerdem wurde das MateLight ausgestellt. Eine Lichtinstallation aus Getränkekästen die bereits zum dritten Mal in Folge als Highlight auf dem Stand zu sehen war.
 
-![bild](/uploads/post_media/makerfaire-2019.jpg)
+![bild](/post_media/makerfaire-2019.jpg)
 
 Außerdem wurden unsere kleinen Wolfsanhänger mit leuchtenden LED-Augen mit den Besuchenden gebastelt. Diese konnten dann direkt mitgenommen werden und kamen entsprechend gut an. Allerdings war die Menge mit 300 Stk viel zu gering kalkuliert.
 

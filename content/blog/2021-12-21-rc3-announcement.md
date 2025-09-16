@@ -3,7 +3,7 @@ layout: event
 title: Remote Chaos Experience rc3 
 description: Die Jahresendveranstaltung des CCC zusammen feiern
 tags: [ccc]
-feature_image: /uploads/post_media/2021-rc3_header.png
+feature_image: /post_media/2021-rc3_header.png
 
 category: Einladung
 registration: https://pretix.hmnd.de/cfhn/rc3-21/

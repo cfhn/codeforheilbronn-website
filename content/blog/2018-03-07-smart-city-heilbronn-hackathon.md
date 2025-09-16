@@ -3,7 +3,7 @@ layout: event
 title: Einladung zum Smart City Hackathon 
 description: Mit Sensoren tolle Sachen machen
 tags: [hackathon]
-feature_image: /uploads/post_media/smart-city_photo-by-leon_cropped.jpg
+feature_image: /post_media/smart-city_photo-by-leon_cropped.jpg
 
 category: Einladung
 registration: https://www.meetup.com/de-DE/codeforhn/events/248306628/
