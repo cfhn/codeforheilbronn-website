@@ -3,7 +3,7 @@ layout: event
 title: Einladung zum dezentralen 37C3
 description: Ein dezentraler Ableger des 37. Chaos Communication Congress in Heilbronn
 tags: [CCC, 37C3]
-feature_image: /uploads/post_media/2023-12-27-dezentraler-37C3/header.png
+feature_image: /post_media/2023-12-27-dezentraler-37C3/header.png
 
 category: Einladung
 registration: https://cloud.cfhn.it/apps/forms/s/yTRWKzgBDsTT2LwNLBWdtKDZ

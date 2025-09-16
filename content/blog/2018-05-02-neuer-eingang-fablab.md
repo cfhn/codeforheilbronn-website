@@ -3,7 +3,7 @@ layout: post
 title: Neuer Eingang zum FabLab
 description: 
 tags: [FabLab]
-feature_image: /uploads/post_media/2018-05-02-neuer-eingang-fablab/b1.jpg
+feature_image: /post_media/2018-05-02-neuer-eingang-fablab/b1.jpg
 
 category: FabLab
 date: 2018-05-02
@@ -20,11 +20,11 @@ In Heilbronn stellte sich nun die Frage, welche Wand mit der Tapete verschönert
 
 In der Zwischenzeit haben wir in Heilbronn unser FabLab auf und ausgebaut. Den 1. Mai nutzen wir um den neuen Eingang freizulegen und umzubauen. Der Bildbetrachter vom ehemaligen Röntgenraum wurde abgebaut, das kleine Regal auch und das Gerümpel, was sich vor der Tür angesammelt hatte fachgerecht verlagert. Leider sah die Wand dahinter durch Putzmittel und Staub mittlerweile recht schäbig aus. Streichen? Keine Farbe da! Abwaschen? Würde evtl gehen. Aber halt - wir haben ja noch die WikiPakaTapete! Und in einem Schrank haben wir auch noch Tapetenleim gefunden. Also los.
 
-![Spontane Baustelle im CoWorkingspace](/uploads/post_media/2018-05-02-neuer-eingang-fablab/b2.jpg "Spontane Baustelle im CoWorkingspace")
+![Spontane Baustelle im CoWorkingspace](/post_media/2018-05-02-neuer-eingang-fablab/b2.jpg "Spontane Baustelle im CoWorkingspace")
 
 
 Erstmal die alte Alukante entfernen. Schrauben ab, und dann mit etwas Gewalt die Silikonverklebte Kante entfernen ohne die Wand zu beschädigen. Nun mussten wir feststellen, dass die alte Tapete sehr dick war und sich stellenweise löste. Also beschlossen wir, dass es wohl am besten wäre die alte Tapete komplett zu entfernen. Also Steckdose abschrauben und Tapete herunterreisen. Dann einweichen und die Reste mit einem Spachtel abkratzen.
 
 Als die Wand soweit bereinigt war und die alte Tapete sauber entfernt, konnten wir endlich die neue Tapete aufbringen. Ein bisschen gestückelt, da die Bahnen zu kurz waren. Aber zum Schluss sah es recht gut aus. Nur die Alukante war verbogen und konnte nicht wieder verwendet werden. Und da der Baumarkt am 1. Mai geschlossen hat, mussten wir uns etwas anderes enfallen lassen. Da das FabLab über einen Lasercutter verfügt, hat unser Lasermeister kurz eine Kante designed und gelasert. Angeschraubt, fertig!
 
-![der fertige, neue Eingang](/uploads/post_media/2018-05-02-neuer-eingang-fablab/b3.jpg "der fertige, neue Eingang")
+![der fertige, neue Eingang](/post_media/2018-05-02-neuer-eingang-fablab/b3.jpg "der fertige, neue Eingang")

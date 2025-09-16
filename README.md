@@ -1,9 +1,6 @@
-# codeforheilbronn-website
-New codeforheilbronn.de website
+# Adding media to the uploads folder
+Please keep the upload folder clean and follow the folder structure.
 
-
-## development
-
-Install hugo -> https://gohugo.io/installation/
-run "hugo serve" in the root directory of the project to start a local server
-open "http://localhost:1313" in your browser to see the website
+- Use the `post_media` and `prj_media` folder for blog posts and projects accordingly.
+- If your post / project contains more than a few pictures, better put them into a separate folder.
+- Ideally, prefix your pictures with a descriptive name (eg. `farmbot_xxx.jpg`)

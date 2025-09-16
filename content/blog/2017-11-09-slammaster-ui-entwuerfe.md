@@ -31,7 +31,7 @@ Die Anwendung wird aus verschiedenen Masken bestehen. Davon ist ein Teil zum pfl
 
 Hier können neue Poeten angelegt und bestehende bearbeitet werden. Das passiert überlicherweise in Vorbereitung auf einen Slam.
 
-![Stammdaten Poeten](/uploads/post_media/slammaster-stammdaten-poeten.png "Stammdaten Poeten")
+![Stammdaten Poeten](/post_media/slammaster-stammdaten-poeten.png "Stammdaten Poeten")
 
 ### Ansicht "Player"
 
@@ -41,4 +41,4 @@ Dabei ist auf der linken Seite der Stream der Screens und auf der rechten Seite 
 
 Im Beispiel ist die Folie für einen Poeten offen. Dort können im Laufe der Veranstaltung die Punkte eingetragen werden und dann animiert auf dem Projektor angezeigt werden.
 
-![Player](/uploads/post_media/slammaster-player.png "Player")
+![Player](/post_media/slammaster-player.png "Player")

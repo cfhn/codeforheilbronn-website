@@ -9,7 +9,7 @@ tags:
       - angular
 category: Projekte  
 
-feature_image: /uploads/post_media/2018-07-03-Shortlink-Service.png
+feature_image: /post_media/2018-07-03-Shortlink-Service.png
 date: 2018-07-03
 author: patrick
 

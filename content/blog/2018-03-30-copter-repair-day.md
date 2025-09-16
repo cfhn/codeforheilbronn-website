@@ -3,7 +3,7 @@ layout: event
 title: Copter Repair Day
 description: Multicopter fit machen für den Sommer
 tags: [Copter, RepairKaffee, Drohne]
-feature_image: /uploads/post_media/2018-03-30-copter-repair-day.jpg
+feature_image: /post_media/2018-03-30-copter-repair-day.jpg
 
 category: Event
 date: 2018-03-30

@@ -3,7 +3,7 @@ layout: event
 title: Community StandUp
 description: 
 tags: [standup]
-feature_image: /uploads/post_media/2018-04-02-standup.jpg
+feature_image: /post_media/2018-04-02-standup.jpg
 
 category: CodingAbend
 date: 2018-04-02

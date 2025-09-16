@@ -3,7 +3,7 @@ layout: event
 title: Einladung zum Open Data Day 2018 Heilbronn 
 description: Mit offenen Daten etwas Gutes tun
 tags: [hackathon]
-feature_image: /uploads/post_media/open-data-day-header.jpg
+feature_image: /post_media/open-data-day-header.jpg
 
 category: Einladung
 registration: https://www.meetup.com/codeforhn/events/246402098/
