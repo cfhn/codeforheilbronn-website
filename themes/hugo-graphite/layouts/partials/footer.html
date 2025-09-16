@@ -1,16 +1,12 @@
         <div id="rStudioFooter" class="band">
           <div class="bandContent">
             <div id="copyright">
-              {{ if .Param "footer.copyright" }}
-              {{ with .Param "footer.copyright" }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}<br>
-              {{ end }}
-              {{ if .Param "footer.support" }}
-              {{ with .Param "footer.support" }}{{ replace . "{year}" now.Year | markdownify}}{{ end }} <a class="rstudioLogo" href="https://www.rstudio.com/" aria-label="RStudio Homepage"></a>
-              {{ end }}
+             <a href="/verein-impressum">Impressum/Kontakt</a>
+             <a href="/verein-datenschutz">Datenschutz</a>
             </div>
             <div id="logos">
-              <a href="{{ .Param "footer.github_url" }}" class="footerLogo gitHub" aria-label="Tidyverse GitHub organization"></a>
-              <a href="{{ .Param "footer.twitter_url" }}" class="footerLogo twitter" aria-label="rstats hashtag on twitter.com"></a>
+              <a href="{{ .Param "footer.github_url" }}" class="footerLogo gitHub" aria-label="Opendata-Heilbronn GitHub organization"></a>
+              <a href="{{ .Param "footer.mastodon_url" }}" class="footerLogo mastodon" aria-label="cfhn on chaos.social"></a>
             </div>
           </div>
         </div>
