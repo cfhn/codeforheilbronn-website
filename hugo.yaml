@@ -52,3 +52,6 @@ params:
     link: "#ff867f"
 
     home_section_even: "rgba(255, 133, 127, 0.1)"
+  footer:
+    github_url: https://github.com/opendata-heilbronn
+    mastodon_url: https://chaos.social/@cfhn

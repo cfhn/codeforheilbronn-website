@@ -490,6 +490,8 @@ a {
           margin-right: 0px; }
         #rStudioFooter .bandContent #logos .footerLogo.twitter {
           background-image: url(images/twitterLogo.svg); }
+        #rStudioFooter .bandContent #logos .footerLogo.mastodon {
+          background-image: url(images/mastodonLogo.svg); }
         #rStudioFooter .bandContent #logos .footerLogo.gitHub {
           background-image: url(images/gitHubLogo.svg); }
         #rStudioFooter .bandContent #logos .footerLogo.linkedIn {
