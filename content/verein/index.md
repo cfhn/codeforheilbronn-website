@@ -36,36 +36,33 @@ News und aktuelle Informationen zu Terminen findet ihr auf unserem Mastodon Acco
 
 Der feste Vereinstreff ist der Coding Abend &copy;, der jeden Donnerstag ab
 18 Uhr im [Maker Space in der experimenta](https://makerspace.experimenta.science/) stattfindet.
-Bitte schaut nach den genauen Öffnungszeiten auf unserem [Eventkalender](events.html).
+Bitte schaut nach den genauen Öffnungszeiten auf unserem [Eventkalender](/events).
 
 ## Satzung
 
-Die Satzung vom Code for Heilbronn findet ihr [hier](satzung.html).
+Die Satzung vom Code for Heilbronn findet ihr [hier](/satzung).
 
 ## Mitgliedsanträge
 
-Die Mitgliedsanträge findet ihr im Makerspace und [online](/uploads/Mitgliedsantrag.pdf). Minderjährige benötigen außerdem das [Einverständnis eines Erziehungsberechtigten](/uploads/Einverständniserklärung.pdf).
-
-Das Formular für das SEPA-Lastschriftverfahren gibt es ebenfalls [hier zum herunterladen](/uploads/CFHN_SEPA-Lastschriftmandat_V3.1.pdf).
-
+Die Mitgliedsanträge findet ihr im Maker Space und [online](/uploads/Mitgliedsantrag.pdf). Minderjährige benötigen außerdem das [Einverständnis eines Erziehungsberechtigten](/uploads/Einverständniserklärung.pdf).
 
 ## Vorstand
 
-Vorstandsvorsitzender
-: Patrick Hahn [Direkter Kontakt](https://patrick246.de/)
+### Vorstandsvorsitzender
+Patrick Hahn [Direkter Kontakt](https://patrick246.de/)
 
-Stellvertretender Vorstand
-: Valentin Fischer [Direkter Kontakt](https://chaos.social/@techbeard)
+### Stellvertretender Vorstand
+Valentin Fischer [Direkter Kontakt](https://chaos.social/@techbeard)
 
-Kassenwart
-: Leandro Späth, [Direkter Kontakt](https://chaos.social/@LeoDJ)
+### Kassenwart
+Leandro Späth [Direkter Kontakt](https://chaos.social/@LeoDJ)
 
-Pressewart
-: Mia Depta [Direkter Kontakt](https://depta.dev)
+### Pressewart
+Mia Depta [Direkter Kontakt](https://depta.dev)
 
-Beisitzer:
-: Anke Fischer [Direkter Kontakt](mailto:info@codeforheilbronn.de)
-: David Mülheims [Direkter Kontakt](https://mastodon.social/@Westfuchs)
-: Jascha Kasper [Direkter Kontakt](https://mastodon.social/@kyomawolf)
-: Jonathan Günz [Direkter Kontakt](https://harmoniemand.de/)
-: Patrick Krämer [Direkter Kontakt](https://patagona.dev/)
+### Beisitzer:
+Anke Fischer [Kontakt](mailto:info@codeforheilbronn.de) \
+David Mülheims [Direkter Kontakt](https://mastodon.social/@Westfuchs) \
+Jascha Kasper [Direkter Kontakt](https://mastodon.social/@kyomawolf) \
+Jonathan Günz [Direkter Kontakt](https://harmoniemand.de/) \
+Patrick Krämer [Direkter Kontakt](https://patagona.dev/)
