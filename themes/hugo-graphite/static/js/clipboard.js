@@ -1,42 +1,51 @@
-/* Clipboard --------------------------*/
-/* This copy-paste button (with tooltips) requires ClipboardJS, JQuery, & Bootstrap JS, linked in head_includes.html */
+import { addToggletipFor } from "toggletip";
 
-$(document).ready(function() {
+const createCopyButton = () => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.classList.add("btn", "btn-primary", "btn-copy-ex");
+  button.title = "Copy to clipboard";
+  button.type = "submit";
+  button["aria-label"] = "Copy to clipboard";
+  button.innerHTML = "<i class='fa fa-copy'></i>";
+  return button;
+};
 
-  function changeTooltipMessage(element, msg) {
-    var tooltipOriginalTitle=element.getAttribute('data-original-title');
-    element.setAttribute('data-original-title', msg);
-    $(element).tooltip('show');
-    element.setAttribute('data-original-title', tooltipOriginalTitle);
+document.querySelectorAll(".highlight > pre").forEach((e) => {
+  e.classList.add("hasCopyButton");
+  e.prepend(createCopyButton());
+});
+
+/**
+ * Select the text of the given node for easy copying
+ * @param {Node} node
+ */
+const selectText = (node) => {
+  const selection = globalThis.getSelection();
+  const range = document.createRange();
+  range.selectNodeContents(node);
+  selection.removeAllRanges();
+  selection.addRange(range);
+};
+
+const handleClipboardCopy = async (codeElement, copyButton) => {
+  try {
+    await navigator.clipboard.writeText(codeElement.textContent);
+    copyButton.showToggletip("Copied!", 2000);
+  } catch (error) {
+    // When clipboard access is not allowed, we select the text so it can easily be copied manually.
+    console.error(error.message);
+    selectText(codeElement);
+    copyButton.showToggletip("Copy using Ctrl+C or Command+C!", 10000);
   }
+};
 
-  if(ClipboardJS.isSupported()) {
-    $(document).ready(function() {
-      var copyButton = "<button type='button' class='btn btn-primary btn-copy-ex' type = 'submit' title='Copy to clipboard' aria-label='Copy to clipboard' data-toggle='tooltip' data-placement='left auto' data-trigger='hover' data-clipboard-copy><i class='fa fa-copy'></i></button>";
+// Initialize toggletips:
+document.querySelectorAll(".btn-copy-ex").forEach((copyButton) => {
+  addToggletipFor(copyButton);
+  const codeElement = copyButton.parentNode.querySelector("code");
 
-      $(".highlight > pre").addClass("hasCopyButton");
-
-      // Insert copy buttons:
-      $(copyButton).prependTo(".hasCopyButton");
-
-      // Initialize tooltips:
-      $('.btn-copy-ex').tooltip({container: 'body'});
-
-      // Initialize clipboard:
-      var clipboardBtnCopies = new ClipboardJS('[data-clipboard-copy]', {
-        text: function(trigger) {
-          return trigger.parentNode.textContent;
-        }
-      });
-
-      clipboardBtnCopies.on('success', function(e) {
-        changeTooltipMessage(e.trigger, 'Copied!');
-        e.clearSelection();
-      });
-
-      clipboardBtnCopies.on('error', function() {
-        changeTooltipMessage(e.trigger,'Press Ctrl+C or Command+C to copy');
-      });
-    });
-  }
-})
+  copyButton.addEventListener("click", () =>
+    handleClipboardCopy(codeElement, copyButton)
+  );
+});
