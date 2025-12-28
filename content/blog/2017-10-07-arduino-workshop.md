@@ -37,6 +37,8 @@ Die von uns erstellte Platine ist nicht nur zum Tic-Tac-Toe Spielen gedacht, son
 
 Das Programm wurde so entwickelt, dass es gerade für Einsteiger leichter zu verstehen ist. Natürlich ist es Open Source und für jeden frei verwendbar.
 
+```c
+
     int Spielfeld[9];
     int Spieler;
     int Gewinner;
@@ -494,3 +496,4 @@ Das Programm wurde so entwickelt, dass es gerade für Einsteiger leichter zu ver
         Serial.println(" ");
         */
     }
+```
