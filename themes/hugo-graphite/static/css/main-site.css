@@ -92,7 +92,7 @@ html, body {
 #main {
   display: grid;
   min-height: 100vh;
-  padding-top: 146px;
+  padding-top: 100px;
   grid-template-rows: 1fr min-content;
 }
 
@@ -996,6 +996,7 @@ em {
 }
 
 #homeContent {
+  padding-top: 146px;
   background-color: #fff; }
   #homeContent .band .bandContent {
     display: flex;
