@@ -1,20 +1,15 @@
-        <div id="rStudioFooter" class="band">
-          <div class="bandContent">
-            <div id="copyright">
-             <a href="/verein-impressum">Impressum/Kontakt</a>
-             <a href="/verein-datenschutz">Datenschutz</a>
-            </div>
-            <div id="logos">
-              <a href="{{ .Param "footer.github_url" }}" class="footerLogo gitHub" aria-label="Opendata-Heilbronn GitHub organization"></a>
-              <a href="{{ .Param "footer.mastodon_url" }}" class="footerLogo mastodon" aria-label="cfhn on chaos.social"></a>
-            </div>
-          </div>
-        </div>
+<div id="rStudioFooter" class="band">
+  <div class="bandContent">
+    <div id="copyright">
+      <a href="/verein-impressum">Impressum/Kontakt</a>
+      <a href="/verein-datenschutz">Datenschutz</a>
+    </div>
+    <div id="logos">
+      <a href="{{ .Param " footer.github_url" }}" class="footerLogo gitHub"
+        aria-label="Opendata-Heilbronn GitHub organization"></a>
+      <a href="{{ .Param " footer.mastodon_url" }}" class="footerLogo mastodon" aria-label="cfhn on chaos.social"></a>
+    </div>
+  </div>
+</div>
 
-      </div>  <!-- main -->
-    </div>  <!-- app -->
-
-    {{ partial "footer_mathjax" . }}
-
-  </body>
-</html>
+{{ partial "footer_mathjax" . }}
