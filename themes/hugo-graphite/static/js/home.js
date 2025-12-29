@@ -1,8 +1,12 @@
-const main = document.querySelector("#appTidyverseSite");
-window.addEventListener("scroll", (event) => {
+const updateHeader = () => {
   if (window.scrollY > 20) {
-    main.classList.add("shrinkHeader");
+    $("#main").addClass("shrinkHeader");
   } else {
-    main.classList.remove("shrinkHeader");
+    $("#main").removeClass("shrinkHeader");
   }
-});
+};
+
+updateHeader();
+setTimeout(() => $("#main").removeClass("noAnimate"));
+
+$(window).on("scroll", updateHeader);

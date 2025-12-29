@@ -1,12 +1,11 @@
-<div id="menu">
-  <div id="menuToggler"></div>
-  <nav id="menuItems">
+<nav id="menu">
+  <ul id="menuItems">
     {{ $page := . }}
     {{ range .Site.Menus.main }}
-      {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+      {{ $active := or ($page.IsMenuCurrent "main" .) }}
       {{ $active = or $active (eq $page.Section (trim .URL "/")) }}
-      {{ $active = or $active (eq $page.RelPermalink .URL ) }}
-    <a class="menuItem {{ if $active }}current{{ end }}" href="{{ .URL }}" title="{{ .Name | safeHTML }}">{{- .Pre -}}{{ .Name | safeHTML }}{{- .Post -}}</a>
+      {{ $active = or $active (eq $page.Path .URL ) }}
+    <li class="menuItem" ><a {{ if $active }}aria-current="page" class="current" {{ end }} href="{{ .URL }}" title="{{ .Name | safeHTML }}">{{- .Pre -}}{{ .Name | safeHTML }}{{- .Post -}}</a></li>
     {{ end }}
-  </nav>
-</div>
+  </ul>
+</nav>
