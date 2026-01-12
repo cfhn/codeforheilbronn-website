@@ -1,11 +1,5 @@
-
-$(document).ready(function() {
-  $('#menuToggler').on('click', function(event) {
-    if ($('#menuItems').hasClass('showMenu')) {
-      $('#menuItems').removeClass("showMenu");
-    }
-    else {
-      $('#menuItems').addClass("showMenu");
-    }
-  });
-});
+const menuToggler = document.querySelector("#menuToggler");
+const menuItems = document.querySelector("#menuItems");
+menuToggler.addEventListener("click", () =>
+  menuItems.classList.toggle("showMenu")
+);
