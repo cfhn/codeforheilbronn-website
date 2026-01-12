@@ -82,6 +82,7 @@
       {{ if .Params.tags }}
         <p style="margin-bottom: 0.5em; margin-top: 0.85em;">
           <i class="fas fa-tags"></i>&nbsp;
+        </p>
       {{ end }}
           {{ range $i, $tags := (.GetTerms "tags") }}
             {{- if $i -}}, {{ end -}}
@@ -89,7 +90,6 @@
             <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
             {{- end -}}
           {{- end -}}
-      </p>
       
      
         </p>

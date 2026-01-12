@@ -30,10 +30,10 @@
       {{ $show_authors := $.Site.Params.authors.show_single | default true }}
       {{ if and $show_authors (or (eq .Section "articles") (eq .Section "blog")) }}
         <p>
-        <i class="fas fa-user-circle fa-fw"></i>
-        {{ partial "pretty_author_names" . }}
-      {{ end }}
+          <i class="fas fa-user-circle fa-fw"></i>
+          {{ partial "pretty_author_names" . }}
         </p>
+      {{ end }}
 
       <div class="article-content">
       {{ .Content }}
