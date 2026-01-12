@@ -1,7 +1,8 @@
 <!--meta tags-->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' platform.twitter.com; img-src *; media-src *; frame-src 'self' platform.twitter.com; upgrade-insecure-requests; block-all-mixed-content">
+<meta name="referrer" content="strict-origin" />
 {{ hugo.Generator }}
 <title>{{ .Title }}</title>
 <meta property="og:title" content="{{ .Title }}" />
