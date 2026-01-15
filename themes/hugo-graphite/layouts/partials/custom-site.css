@@ -1,11 +1,6 @@
 /* Google Fonts */
 {{ with .Param "headers.import" }} {{ . }} {{end}}
 
-body {
-	background-color: {{ .Param "colors.background" }};
-	color: {{ .Param "colors.text" }};
-}
-
 .article-header {
   margin-bottom: 1rem;
 }
@@ -28,38 +23,15 @@ a {
   color: {{ .Param "colors.link" }};
 }
 
-a:hover {
-  color: {{ .Param "colors.link_hover" }};
-}
-
-a:focus {
-  outline-color: {{ .Param "colors.link_hover" }};
-}
-
-.column25-left .sectionTitle a:hover:not(.current),
-.column16-left .sectionTitle a:hover:not(.current) { /* Tutorial left sidebar */
-  color: {{ .Param "colors.text" }};
-}
-
 .icon-attribution, 
 .icon-attribution a {
-  color: {{ .Param "colors.text" }};
   opacity: 75%;
 }
 
 
 /* Landing page content bands */
-
-#homeContent .band.first {
-  background-color: {{ .Param "colors.home_section_odd" }};
-}
-
 #homeContent .band.second {
   background-color: {{ .Param "colors.home_section_even" }};
-}
-
-#homeContent .band.third {
-  background-color: {{ .Param "colors.home_section_odd" }};
 }
 
 /* Top navigation bar menu */
@@ -69,9 +41,6 @@ a:focus {
   color: {{ .Param "colors.menu_text" }};
 }
 
-#rStudioHeader .productName {
-  color: {{ .Param "colors.menu_title" }};
-}
 
 #rStudioHeader .productName:hover,
 #rStudioHeader .productName:focus {
@@ -82,45 +51,6 @@ a:focus {
   background-color: #75aadb;
   color: {{ .Param "colors.menu_text" }};
 }
-
-#rStudioHeader #menu .menuItem:hover {
-  background-color: {{ .Param "colors.menu_box_hover" }};
-  color: {{ .Param "colors.menu_text_active" }};
-}
-
-#rStudioHeader #menu .menuItem.current {
-  background-color: {{ .Param "colors.menu_box_active" }};
-  color: {{ .Param "colors.menu_text_current" }};
-  text-decoration: {{ .Param "colors.menu_decorate_current" }};
-}
-
-/* Footer */
-
-#rStudioFooter.band {
-  background-color: {{ .Param "colors.footer_primary" }};
-}
-
-#rStudioFooter .bandContent #copyright {
-  color: {{ .Param "colors.footer_text" }};
-}
-
-/* Tables */
-table {
-  max-width: unset;
-}
-
-table tbody tr:nth-child(even){
-  background-color: {{ .Param "colors.table_row_even" }};
-}
-
-table tbody tr:nth-child(odd){
-  background-color: {{ .Param "colors.table_row_odd" }};
-}
-
-.latest {
-  border-top: .5em solid {{ .Param "colors.latest_border" }};
-}
-
 
 /* ------Accent Font------- */
 

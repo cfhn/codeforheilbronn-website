@@ -2,39 +2,26 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
-     <!--this loads all stylesheets, metadata tags, favicons, and jquery -->
-     {{ partial "head_includes.html" . }}
+  {{ partial "head_includes.html" . }}
 </head>
 
 <body>
-     <div id="appTidyverseSite" {{ if not .IsHome }}class="shrinkHeader alwaysShrinkHeader" {{ end }}>
-          <div id="main">
-               <!-- rstudio header -->
-               <div id="rStudioHeader">
-                    <div class="band">
-                         <div class="innards bandContent">
-                              <div>
-                                   {{ if .Site.Params.logo.image }}
-                                   <a href="{{ "/" | relURL }}" class="nav-logo">
-                                        <img src="{{ print " images/" .Site.Params.logo.image | relURL }}"
-                                             width="{{ .Site.Params.logo.width }}"
-                                             height="{{ .Site.Params.logo.height }}" alt="{{ .Site.Params.logo.alt }}">
-                                   </a>
-                                   {{- else -}}
-                                   <a class="productName" href="{{ "/" | relLangURL }}" title="home">{{- .Site.Title
-                                        -}}</a>
-                                   {{ end }}
-                              </div>
-                              {{ partial "nav.html" . }}
-                         </div>
-                    </div>
-               </div>
-
-
-               {{ block "main" . }}
-               <!-- The part of the page that begins to differ between templates -->
-               {{ end }}
-               {{ partial "footer.html" . }}
+  <div id="main" class="{{ if not .IsHome }} shrinkHeader alwaysShrinkHeader{{ end }}">
+    <!-- rstudio header -->
+    <header id="rStudioHeader" class="noAnimate">
+      <div class="band">
+        <div class="innards bandContent">
+          <a class="productName" href="/" title="home">
+            Code for Heilbronn e.V.
+          </a>
+          {{ partial "nav.html" . }}
+        </div>
+      </div>
+    </header>
+    {{ block "main" . }}
+    <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+    {{ partial "footer.html" . }}
 </body>
 
 </html>
