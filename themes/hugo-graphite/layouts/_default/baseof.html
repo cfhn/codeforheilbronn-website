@@ -6,9 +6,9 @@
 </head>
 
 <body>
-  <div id="main" class="noAnimate{{ if not .IsHome }} shrinkHeader alwaysShrinkHeader{{ end }}">
+  <div id="main" class="{{ if not .IsHome }} shrinkHeader alwaysShrinkHeader{{ end }}">
     <!-- rstudio header -->
-    <header id="rStudioHeader">
+    <header id="rStudioHeader" class="noAnimate">
       <div class="band">
         <div class="innards bandContent">
           <a class="productName" href="/" title="home">

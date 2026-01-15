@@ -10,8 +10,7 @@ Zusätzlich zum Coding Abend findet der __Premium Coding Abend__ jeden 1. Donner
 Außerdem haben wir 2x im Monat die __Community Days__, welche als exklusiven Tag für Vereinsmitglieder im [Maker Space](https://makerspace.experimenta.science/) dienen. Die Community Days finden immer jeden 1. Sonntag ab 15 Uhr und 3. Montag ab 18 Uhr statt.  
 Wichtig: Falls du noch kein Mitglied bist, aber an einem der Community Day Termine vorbeischauen möchtest, gib uns bitte kurz [per Mail](mailto:info@codeforheilbronn.de) bescheid!
 
-Der Eventkalender beinhaltet alle Coding- und Premium Coding Abende, Community Days und Events. Der kann hier eingesehen und bezogen werden: [Web](https://cloud.cfhn.it/apps/calendar/p/g9mdnek6Mp6WkQ3k) [ICS](https://cloud.cfhn.it/remote.php/dav/public-calendars/g9mdnek6Mp6WkQ3k?export)
+Der Eventkalender beinhaltet alle Coding- und Premium Coding Abende, Community Days und Events. Diese können hier eingesehen/bezogen werden:
 
-
-
-
+- [Web](https://cloud.cfhn.it/apps/calendar/p/g9mdnek6Mp6WkQ3k)
+- [ICS](https://cloud.cfhn.it/remote.php/dav/public-calendars/g9mdnek6Mp6WkQ3k?export)
