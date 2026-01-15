@@ -1,12 +1,14 @@
-const updateHeader = () => {
+const main = document.getElementById("main");
+window.addEventListener("scroll", (event) => {
   if (window.scrollY > 20) {
-    $("#main").addClass("shrinkHeader");
+    main.classList.add("shrinkHeader");
   } else {
-    $("#main").removeClass("shrinkHeader");
+    main.classList.remove("shrinkHeader");
   }
-};
+});
 
-updateHeader();
-setTimeout(() => $("#main").removeClass("noAnimate"));
-
-$(window).on("scroll", updateHeader);
+setTimeout(() =>
+  document
+    .querySelectorAll(".noAnimate")
+    .forEach((e) => e.classList.remove("noAnimate"))
+);
