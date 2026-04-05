@@ -33,7 +33,7 @@ News und aktuelle Informationen zu Terminen findet ihr auf unserem Mastodon Acco
 [@cfhn](https://chaos.social/@cfhn) und auf unserem [Eventkalender](events.html).
 
 ## Chaostreff Heilbronn
-Seit April 2023 sind wir nun auch als [Chaostreff](https://www.ccc.de/de/club/chaostreffs) für Heilbronn da. Unsere Community besucht gemeinsam viele CCC- und Chaosnahe Events, nimmt an aktuellen Themen und Projekten aus dem Umfeld teil und veranstaltet mit der DHCP jährlich ein Chaosevent. Regional sind wir Teils des Chaos Mauldasch Cluster, welcher eine Vereinigung vieler Chaos-nahen Vereine aus Baden-Württemberg ist!
+Seit April 2023 sind wir nun auch als [Chaostreff](https://www.ccc.de/de/club/chaostreffs) für Heilbronn da. Unsere Community besucht gemeinsam viele CCC- und Chaosnahe Events, nimmt an aktuellen Themen und Projekten aus dem Umfeld teil und veranstaltet mit der DHCP jährlich ein Chaosevent. Regional sind wir Teil des Chaos Mauldasch Cluster, welcher eine Vereinigung vieler Chaos-nahen Vereine aus Baden-Württemberg ist!
 
 ## Treffen und Öffnungszeiten
 
