@@ -37,4 +37,4 @@ col2:
     alt: "Code for Heilbronn e.V."
 ---
 
-Wir sind ein Verein von jungen Menschen, die sich für Technik interessieren und gerne ihr Wissen mit anderen teilen. Schaut euch unsere Projekte an und kommt zu einem unserer Events.
+Wir sind ein Verein von jungen Menschen, die sich für Technik interessieren und gerne ihr Wissen mit anderen teilen. Als [Chaostreff](https://www.ccc.de/de/club/chaostreffs), haben wir außerdem eine gewisse Nähe zum Chaos Computer Club. Schaut euch unsere Projekte an und kommt zu einem unserer Events!
