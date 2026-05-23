@@ -3,7 +3,16 @@ baseurl: /
 theme: hugo-graphite
 
 relativeurls: false
+
+defaultContentLanguage: de
+defaultContentLanguageInSubdir: false
 languageCode: de-DE
+languages:
+  de:
+    languageCode: de-DE
+    languageDirection: ltr
+    languageName: Deutsch
+
 description: "Code for Heilbronn e.V. - Open Data und Open Source für Heilbronn"
 
 ignoreFiles:
