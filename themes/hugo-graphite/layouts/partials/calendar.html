@@ -1,37 +1,84 @@
-{{ $allEvents := sort (where $.Site.RegularPages "Section" "events") ".Date" }}
-{{ $futureEvents := where $allEvents "Date" "ge" time.Now }}
+<table>
+    <thead>
+    <tr>
+    <th>Event</th>
+    <th>Date(s)</th>
+    <th>Location</th>
+    </tr>
+    </thead>
+    <tbody id="events">
+      {{ $taxo := "author" }}
+      {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
+      {{ if ge (time .Date).Unix now.Unix }}
+      <tr>
+        <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
+        <td>{{ partial "pretty_date_ranges" . }}</td>
+        <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
+        <td>
+          {{ with .Params.location }}
+            {{ .name  }}
+          {{ end }}
+        </td>
+      </tr>
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+<script>
+    (async () => {
+        const eventsBody = document.getElementById('events');
+        const icalUrl = "{{ .Param "calendar.ical_url" }}";
+        const today = new Date();
+        const dateCutoff = new Date(new Date(today).setMonth(today.getMonth() + {{ .Param "calendar.lookahead_months" }}));
+        console.log(dateCutoff);
+        const icalContent = await fetch(icalUrl).then(response => response.text());
+        const jcalData = ICAL.parse(icalContent);
+        const component = new ICAL.Component(jcalData);
+        const events = component.getAllSubcomponents("vevent")
+            .map((event) => new ICAL.Event(event))
+            .filter((event) => event.isRecurring() || event.startDate.toUnixTime()*1000 > today.getTime())
+            .flatMap((event) => {
+                if (!event.isRecurring()) {
+                    return [event];
+                }
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Event</th>
-      <th>Date(s)</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Team Member(s)</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{ $taxo := "author" }}
-    {{ range $futureEvents }}
-    <tr>
-      <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
-      <td>{{ partial "pretty_date_ranges" . }}</td>
-      <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
-      <td>
-        {{ with .Params.location }}
-        {{ .name }}
-        {{ end }}
-      </td>
-      <td>{{- range .Params.educators }}
-        {{- with $.Site.GetPage "taxonomyTerm" (printf "%s/%s" $taxo (urlize .)) }}
-        <a href="{{ .Permalink }}">
-          {{ with .Params.name }}{{ index (split . " ") 0 }}{{ end }}
-        </a>
-        {{ end }}
-        {{ end }}
-      </td>
-    </tr>
-    {{ end }}
-  </tbody>
-</table>
+                const iterator = event.iterator(new ICAL.Time.fromJSDate(new Date()));
+                const eventInstances = [];
+
+                console.log(event.summary);
+                for (let next = iterator.next(); next && (next.toUnixTime()*1000 < dateCutoff.getTime()); next = iterator.next()) {
+                    console.log(next);
+                    const nextEvent = new ICAL.Event(new ICAL.Component(event.component.toJSON()));
+                    nextEvent.startDate = new ICAL.Time({
+                        year: next.year,
+                        month: next.month,
+                        day: next.day,
+                        hour: next.hour,
+                        minute: next.minute,
+                        second: next.second,
+                        isDate: next.isDate,
+                    });
+                    eventInstances.push(nextEvent);
+                }
+
+                return eventInstances;
+            })
+            .sort((a,b) => a.startDate.compare(b.startDate))
+            .map((event) => {
+                const row = document.createElement("tr");
+                const eventName = document.createElement("td");
+                const dateCol = document.createElement("td");
+                const location = document.createElement("td");
+
+                console.log(event.summary, event.startDate.year, event.startDate.month, event.startDate.day);
+
+                eventName.innerText = event.summary;
+                dateCol.innerText = `${event.startDate.year}-${("00"+event.startDate.month).slice(-2)}-${("00"+event.startDate.day).slice(-2)}`;
+                location.innerText = event.location;
+
+                row.append(eventName, dateCol, location);
+                return row;
+            });
+        eventsBody.append(...events);
+    })();
+</script>
