@@ -30,7 +30,7 @@ ist herzlich dazu eingeladen, uns beim Coding Abend oder bei einem anderen Event
 und keine Angst, Vorkenntnisse sind nicht notwendig.
 
 News und aktuelle Informationen zu Terminen findet ihr auf unserem Mastodon Account
-[@cfhn](https://chaos.social/@cfhn) und auf unserem [Eventkalender](events.html).
+[@cfhn](https://chaos.social/@cfhn) und auf unserem [Eventkalender](/events).
 
 ## Chaostreff Heilbronn
 Seit April 2023 sind wir nun auch als [Chaostreff](https://www.ccc.de/de/club/chaostreffs) für Heilbronn da. Unsere Community besucht gemeinsam viele CCC- und Chaosnahe Events, nimmt an aktuellen Themen und Projekten aus dem Umfeld teil und veranstaltet mit der DHCP jährlich ein Chaosevent. Regional sind wir Teil des Chaos Mauldasch Cluster, welcher eine Vereinigung vieler Chaos-nahen Vereine aus Baden-Württemberg ist!
