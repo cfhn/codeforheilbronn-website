@@ -498,6 +498,8 @@ a {
           background-image: url(images/linkedInLogo.svg); }
         #rStudioFooter .bandContent #logos .footerLogo.facebook {
           background-image: url(images/facebookLogo.svg); }
+        #rStudioFooter .bandContent #logos .footerLogo.codeberg {
+          background-image: url(images/codebergLogo.svg); }
 
 @media screen and (max-width: 350px) {
   #rStudioFooter .bandContent #logos .footerLogo {

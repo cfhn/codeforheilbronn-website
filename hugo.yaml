@@ -55,4 +55,4 @@ params:
   footer:
     github_url: https://github.com/opendata-heilbronn
     mastodon_url: https://chaos.social/@cfhn
-
+    codeberg_url: https://codeberg.org/cfhn
