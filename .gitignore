@@ -6,4 +6,5 @@ public/
 .idea/
 *.iml
 static/admin/sveltia-cms.js
+static/js/
 .obsidian/

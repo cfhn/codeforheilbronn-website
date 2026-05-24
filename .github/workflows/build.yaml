@@ -53,6 +53,10 @@ jobs:
       - run: npm ci
       - name: Install Sveltia CMS
         run: cp ./node_modules/@sveltia/cms/dist/sveltia-cms.js ./static/admin/
+      - name: Install ical.js
+        run: |
+          mkdir -p ./static/js
+          cp ./node_modules/ical.js/dist/ical.es5.min.cjs ./static/js/
       - name: Configure Git
         run: git config core.quotepath false
       - name: Build with Hugo
