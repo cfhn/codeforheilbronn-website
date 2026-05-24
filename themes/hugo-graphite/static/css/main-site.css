@@ -556,7 +556,9 @@ a {
   background-color: #f8f8f8; }
 
 .tableContainer {
-  overflow-x: auto; }
+  overflow-x: auto;
+  margin-top: 2rem;
+}
 
 table.contentListing {
   width: 100%;
@@ -1224,7 +1226,6 @@ table {
   width: 100%;
   text-align: left;
   font-size: .87rem;
-  max-width: 70%;
 }
 
 table thead{
