@@ -7,7 +7,7 @@ title: Unser Verein
 
 Der Code for Heilbronn e. V. wurde am 24.07.2017 in Heilbronn gegründet. Code
 for Heilbronn war zuvor eine offene Initiative, die von Felix Ebert
-und Adrian Stabiszewski im Jahre 2014 gegründet wurde. Die Intiative wurde
+und Adrian Stabiszewski im Jahre 2014 ins Leben gerufen wurde. Die Intiative wurde
 auf Einladung der [Open Knowledge Foundation Deutschland](https://okfn.de/ )
 gegründet, die das Vorbild der "Code for" Organisationen von Code for America
 übernahm.
@@ -18,28 +18,28 @@ Er organisiert Software- und Hardware-Workshops und setzt sich
 für die Veröffentlichung und den Einsatz offener Daten ein.
 
 Was vor einigen Jahren als kleine Gruppe von OpenData-begeisterten Softwareentwicklern begann,
-hat sich zu etwas viel größerem entwickelt: Eine wöchentliche Veranstaltung in einem Maker Space,
-in dem sowohl Hardware-, als auch Softwareprojekte umgesetzt werden können.
+hat sich zu etwas viel Größerem entwickelt: Eine wöchentliche Veranstaltung in einem Maker Space,
+in dem sowohl Hardware- als auch Softwareprojekte umgesetzt werden können.
 
 Für die große Community, die inzwischen die nationalen Grenzen überschritten hat,
-ist der Kerngedanke der gegenseitigen Hilfe stets im Vordergrund, wodurch jeder die Möglichkeit hat,
-seine Fähigkeiten zu erweitern und Neues zu lernen.
+ist der Kerngedanke der gegenseitigen Hilfe stets im Vordergrund, wodurch alle die Möglichkeit haben,
+ihre Fähigkeiten zu erweitern und Neues zu lernen.
 
 Wer Lust und Interesse hat, mit Gleichgesinnten Projekte umzusetzen und sich neue Fähigkeiten anzueignen,
-ist herzlich dazu eingeladen, uns beim Coding Abend oder bei einem anderen Event im Maker Space experimenta in Heilbronn zu besuchen –
+ist herzlich dazu eingeladen, uns beim Coding Abend oder bei einem anderen Event im Maker Space der experimenta in Heilbronn zu besuchen –
 und keine Angst, Vorkenntnisse sind nicht notwendig.
 
 News und aktuelle Informationen zu Terminen findet ihr auf unserem Mastodon Account
-[@cfhn](https://chaos.social/@cfhn) und auf unserem [Eventkalender](/events).
+[@cfhn](https://chaos.social/@cfhn) und in unserem [Eventkalender](/events).
 
 ## Chaostreff Heilbronn
-Seit April 2023 sind wir nun auch als [Chaostreff](https://www.ccc.de/de/club/chaostreffs) für Heilbronn da. Unsere Community besucht gemeinsam viele CCC- und Chaosnahe Events, nimmt an aktuellen Themen und Projekten aus dem Umfeld teil und veranstaltet mit der DHCP jährlich ein Chaosevent. Regional sind wir Teil des Chaos Mauldasch Cluster, welcher eine Vereinigung vieler Chaos-nahen Vereine aus Baden-Württemberg ist!
+Seit April 2023 sind wir auch als [Chaostreff](https://www.ccc.de/de/club/chaostreffs) für Heilbronn da. Unsere Community besucht gemeinsam viele CCC- und Chaos-nahe Events, nimmt an aktuellen Themen und Projekten aus dem Umfeld teil und veranstaltet mit der DHCP jedes Jahr selbst ein Chaosevent. Regional sind wir Teil des Chaos Mauldasch Clusters, welches eine Vereinigung vieler Chaos-nahen Vereine aus Baden-Württemberg ist!
 
 ## Treffen und Öffnungszeiten
 
 Der feste Vereinstreff ist der Coding Abend &copy;, der jeden Donnerstag ab
 18 Uhr im [Maker Space in der experimenta](https://makerspace.experimenta.science/) stattfindet.
-Bitte schaut nach den genauen Öffnungszeiten auf unserem [Eventkalender](/events).
+Bitte schaut nach den genauen Öffnungszeiten in unserem [Eventkalender](/events).
 
 ## Satzung
 

@@ -5,5 +5,5 @@ alt_text: "Das Hackcenter auf der DHCP24 mit Bar im Hintergrund"
 url_image: https://dhcp.cfhn.it
 ---
 
-Die Heilbronner Chaos Party 2025 (DHCP25, DHCP24) war eine Veranstaltung, die von Code for Heilbronn (CFHN) organisiert wurde – für dezentralen, verteilten, kollaborativen Chaos und F.U.N. Dieses Jahr wieder, als DHCP26!
+Die Heilbronner Chaos Party 2025 (DHCP25, DHCP24) war eine Veranstaltung, die von Code for Heilbronn (CFHN) organisiert wurde – für dezentralen, verteilten, kollaborativen Chaos und F.U.N. Dieses Jahr wieder als DHCP26!
    
