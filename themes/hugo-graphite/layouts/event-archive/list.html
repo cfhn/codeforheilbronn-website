@@ -2,7 +2,7 @@
 
 {{ $taxo := "author" }}
 
-<div class="band padForHeader pushFooter">
+<div class="band padForHeader">
   <center>
   <h1>{{ .Title }}</h1>
   {{ range (where $.Site.RegularPages "Section" "events").GroupByDate "2006" }}

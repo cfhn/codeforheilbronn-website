@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cfhn/codeforheilbronn-website#readme",
   "dependencies": {
-    "@sveltia/cms": "^0.77.2"
+    "@sveltia/cms": "^0.164.0",
+    "ical.js": "^2.2.1"
   }
 }
