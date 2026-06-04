@@ -12,12 +12,16 @@
   </table>
 <script>
     const formatDate = (date) => {
+        if (date.isDate) {
+            date.addDuration(new ICAL.Duration({days: -1}))
+        }
+
         let result = `${date.year}-${("00"+date.month).slice(-2)}-${("00"+date.day).slice(-2)}`;
         if (!date.isDate) {
             result += ` ${("00"+date.hour).slice(-2)}:${("00"+date.minute).slice(-2)}:${("00"+date.second).slice(-2)}`;
         }
         return result;
-    }
+    };
 
     (async () => {
         const eventsBody = document.getElementById('events');
