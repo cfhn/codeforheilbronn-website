@@ -28,7 +28,6 @@
         const icalUrl = "{{ .Param "calendar.ical_url" }}";
         const today = new Date();
         const dateCutoff = new Date(new Date(today).setMonth(today.getMonth() + {{ .Param "calendar.lookahead_months" }}));
-        console.log(dateCutoff);
         const icalContent = await fetch(icalUrl).then(response => response.text());
         const jcalData = ICAL.parse(icalContent);
         const component = new ICAL.Component(jcalData);
@@ -43,7 +42,6 @@
                 const iterator = event.iterator(event.startDate);
                 const eventInstances = [];
 
-                console.log(event.summary);
                 for (let next = iterator.next(); next && (next.toUnixTime()*1000 < dateCutoff.getTime()); next = iterator.next()) {
                     if (next.toUnixTime()*1000 < today.getTime()) {
                         continue
