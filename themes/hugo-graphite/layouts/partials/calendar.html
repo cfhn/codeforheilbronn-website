@@ -2,29 +2,23 @@
     <thead>
     <tr>
     <th>Event</th>
-    <th>Date</th>
+    <th>Start</th>
+    <th>Ende</th>
     <th>Location</th>
     </tr>
     </thead>
     <tbody id="events">
-      {{ $taxo := "author" }}
-      {{ range sort (where $.Site.RegularPages "Section" "events") ".Date" }}
-      {{ if ge (time .Date).Unix now.Unix }}
-      <tr>
-        <td><a href="{{ .Params.event_url }}">{{ .Title | markdownify }}</a></td>
-        <td>{{ partial "pretty_date_ranges" . }}</td>
-        <td>{{ with .Params.description }}{{ . | markdownify }}{{ end }}</td>
-        <td>
-          {{ with .Params.location }}
-            {{ .name  }}
-          {{ end }}
-        </td>
-      </tr>
-        {{ end }}
-      {{ end }}
     </tbody>
   </table>
 <script>
+    const formatDate = (date) => {
+        let result = `${date.year}-${("00"+date.month).slice(-2)}-${("00"+date.day).slice(-2)}`;
+        if (!date.isDate) {
+            result += ` ${("00"+date.hour).slice(-2)}:${("00"+date.minute).slice(-2)}:${("00"+date.second).slice(-2)}`;
+        }
+        return result;
+    }
+
     (async () => {
         const eventsBody = document.getElementById('events');
         const icalUrl = "{{ .Param "calendar.ical_url" }}";
@@ -36,7 +30,7 @@
         const component = new ICAL.Component(jcalData);
         const events = component.getAllSubcomponents("vevent")
             .map((event) => new ICAL.Event(event))
-            .filter((event) => event.isRecurring() || event.startDate.toUnixTime()*1000 > today.getTime())
+            .filter((event) => event.isRecurring() || (event.endDate && event.endDate.toUnixTime()*1000 > today.getTime()) || event.startDate.toUnixTime()*1000 > today.getTime())
             .flatMap((event) => {
                 if (!event.isRecurring()) {
                     return [event];
@@ -61,6 +55,21 @@
                         second: next.second,
                         isDate: next.isDate,
                     });
+                    if (nextEvent.endDate) {
+                        const nextEnd = next.clone();
+                        nextEnd.addDuration(event.duration);
+
+                        nextEvent.endDate = new ICAL.Time({
+                            year: nextEnd.year,
+                            month: nextEnd.month,
+                            day: nextEnd.day,
+                            hour: nextEnd.hour,
+                            minute: nextEnd.minute,
+                            second: nextEnd.second,
+                            isDate: nextEnd.isDate,
+                        })
+                    }
+
                     eventInstances.push(nextEvent);
                 }
 
@@ -70,17 +79,16 @@
             .map((event) => {
                 const row = document.createElement("tr");
                 const eventName = document.createElement("td");
-                const dateCol = document.createElement("td");
+                const startCol = document.createElement("td");
+                const endCol = document.createElement("td");
                 const location = document.createElement("td");
 
                 eventName.innerText = event.summary;
-                dateCol.innerText = `${event.startDate.year}-${("00"+event.startDate.month).slice(-2)}-${("00"+event.startDate.day).slice(-2)}`;
-                if (!event.startDate.isDate) {
-                    dateCol.innerText += ` ${("00"+event.startDate.hour).slice(-2)}:${("00"+event.startDate.minute).slice(-2)}:${("00"+event.startDate.second).slice(-2)}`;
-                }
+                startCol.innerText = formatDate(event.startDate);
+                endCol.innerText = formatDate(event.endDate);
                 location.innerText = event.location;
 
-                row.append(eventName, dateCol, location);
+                row.append(eventName, startCol, endCol, location);
                 return row;
             });
         eventsBody.append(...events);
