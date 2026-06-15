@@ -47,8 +47,9 @@ Bitte schaut nach den genauen Öffnungszeiten in unserem [Eventkalender](/events
 
 Als Verein wollen wir Menschen für Informatik, Technik und offene Infrastrukturen gewinnen. Wir möchten allen die wunderbare Welt der Softwareentwicklung, der Daten und des Hardwarehackings
 nachebringen. Mit Projekten an denen alle mitarbeiten können, mit Hilfe bei eigenen Projekten und unterschiedlichen Veranstaltungsformaten wollen wir das Interesse und die Neugier an Technik
-entfachen. Dabei geht es uns weniger um die Ergebnisse als viel mehr um den Weg dahin. Das bedeutet auch, dass wir besonders eigene Arbeit und Kreativität fördern wollen. Auf den Einsatz von KI und
-VideCoding wollen wir dabei bewusst verzichten. Das bedeutet nicht, dass du mit einem ML oder Computer-Vision-Projekt nicht dazu kommen darfst, aber gehe mit den Ressourcen dieser Erde
+entfachen. Dabei geht es uns weniger um die Ergebnisse als viel mehr um den Weg dahin. Das bedeutet auch, dass wir besonders eigene Arbeit und Kreativität fördern wollen. Auf den Einsatz von
+generativer KI und
+VibeCoding wollen wir dabei bewusst verzichten, um das eigene Lernen zu fördern. Das bedeutet nicht, dass du mit einem Machine-Learning oder Computer-Vision-Projekt nicht dazu kommen darfst, aber gehe mit den Ressourcen dieser Erde
 verantwortungsvoll um!
 
 An den wöchentlichen Coding Abenden besprechen wir die aktuellen Projekte. So können alle Menschen auf dem Laufenden bleiben und neu dazugekommene abgeholt werden. Wir freuen uns immer über kreative
