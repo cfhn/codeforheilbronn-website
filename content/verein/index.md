@@ -45,16 +45,13 @@ Bitte schaut nach den genauen Öffnungszeiten in unserem [Eventkalender](/events
 
 ## Was wir machen
 
-Als Verein wollen wir Menschen für Informatik, Technik und offene Infrastrukturen gewinnen. Wir möchten allen die wunderbare Welt der Softwareentwicklung, der Daten und des Hardwarehackings
-nachebringen. Mit Projekten an denen alle mitarbeiten können, mit Hilfe bei eigenen Projekten und unterschiedlichen Veranstaltungsformaten wollen wir das Interesse und die Neugier an Technik
-entfachen. Dabei geht es uns weniger um die Ergebnisse als viel mehr um den Weg dahin. Das bedeutet auch, dass wir besonders eigene Arbeit und Kreativität fördern wollen. Auf den Einsatz von
-generativer KI und
-Vibe-Coding wollen wir dabei bewusst verzichten, um das eigene Lernen zu fördern. Das bedeutet nicht, dass du mit einem Machine-Learning oder Computer-Vision-Projekt nicht dazu kommen darfst, aber gehe mit den Ressourcen dieser Erde
-verantwortungsvoll um!
+Als Verein wollen wir Menschen für Informatik, Technik und offene Daten gewinnen. Wir möchten allen die wunderbare Welt der Softwareentwicklung, der digitalen Unabhängigkeit und des Hardwarehackings näher bringen. Mit Projekten an denen alle mitarbeiten können, Hilfe bei eigenen Projekten und unterschiedlichen Veranstaltungsformaten wollen wir das Interesse und die Neugier an Technik entfachen.
 
-An den wöchentlichen Coding Abenden besprechen wir die aktuellen Projekte. So können alle Menschen auf dem Laufenden bleiben und neu dazugekommene abgeholt werden. Wir freuen uns immer über kreative
-oder technologisch herausfordernde Projektideen. Egal ob du schon weist, wie du ein Problem angehen willst oder noch mit einer abstrakten Idee am Anfang stehst. Unsere Community kann dir sicher dabei
-helfen weiter zu kommen.
+Dabei geht es uns weniger um die Ergebnisse als viel mehr um den Weg dahin - wir wollen besonders eigene Arbeit und Kreativität unterstützen.
+Auf den Einsatz von generativer KI und Vibe-Coding wollen wir dabei bewusst verzichten, um das eigene Lernen zu fördern.
+Das bedeutet selbstverständlich nicht, dass du mit einem Machine-Learning oder Computer-Vision-Projekt nicht dazu kommen darfst, vor allem wenn dieses - anders als die überwältigende Mehrheit an kommerziellen KI-Modellen - auf eigenen oder offenen Daten basiert!
+
+An den wöchentlichen Coding-Abenden besprechen wir die aktuellen Projekte. So können alle auf dem Laufenden bleiben und neu dazugekommene abgeholt werden. Wir freuen uns immer über kreative oder technologisch herausfordernde Projektideen. Egal ob du schon weißt, wie du ein Problem angehen willst oder noch mit einer abstrakten Idee am Anfang stehst - Unsere Community kann dir sicher dabei helfen, weiter zu kommen.
 
 ## Satzung
 
