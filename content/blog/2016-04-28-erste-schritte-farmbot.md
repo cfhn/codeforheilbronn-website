@@ -9,7 +9,7 @@ categories:
 - CodeWeek
 - FarmBot
 excerpt: "Juhu! Mit Gewinn des CodeWeek Award ist es uns im Rahmen von Code for Heilbronn möglich, einen Farmbot mit Kindern und Jugendlichen aufzubauen – ein Projekt, welches wir schon lange umsetzen wollten."
-authors:
+author:
 ---
 
 Dieser Artikel ist ursprünglich auf [award.coweek.de](http://award.codeweek.de) veröffentlich worden. 
