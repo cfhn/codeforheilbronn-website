@@ -16,9 +16,9 @@ languages:
 description: "Code for Heilbronn e.V. - Open Data und Open Source für Heilbronn"
 
 ignoreFiles:
-- \.Rmd$
-- _files$
-- _cache$
+  - \.Rmd$
+  - _files$
+  - _cache$
 
 preserveTaxonomyNames: true
 
@@ -43,14 +43,16 @@ markup:
 
 menus:
   main:
-  - name: "Verein"
-    url: /verein
-  - name: Open Data
-    url: /open-data
-  - name: Blog
-    url: /blog
-  - name: Events
-    url: /events
+    - name: "Verein"
+      url: /verein
+    - name: Open Data
+      url: /open-data
+    - name: Blog
+      url: /blog
+    - name: Events
+      url: /events
+    - name: Projekte
+      url: /projects
 
 params:
   colors:
