@@ -21,13 +21,13 @@
           </div>
           <p>{{ .Content | markdownify | emojify }}</p>
 
-{{ $show_articles := $.Site.Params.authors.show_latest | default true }}
+{{ $show_articles := $.Site.Params.author.show_latest | default true }}
 {{ if $show_articles }}
 {{ $query := where .Pages ".IsNode" false }}
 {{ $count := len $query }}
 {{ if $count }}
     <div class="latest">
-      <h3>{{ $.Site.Params.authors.label_latest | default "Latest" }}</h3>
+      <h3>{{ $.Site.Params.author.label_latest | default "Latest" }}</h3>
       <ul>
         {{ range $query }}
         <li>

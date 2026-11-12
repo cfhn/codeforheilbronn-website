@@ -9,7 +9,7 @@ layout: post
 category: Projekte
 subtitle: Erste UI-Entwürfe für den neuen Slammaster
 excerpt: Zusammen mit Tino aus Mannheim haben wir die ersten Schritte zum neuen Slammaster genommen. Zu dritt haben wir ausdiskutiert, wie die Oberfläche des neuen Tools grob aufgebaut sein soll. Erste Zeilen Code wurden auch schon geschrieben.
-authors: 
+author: 
     - joni
 ---
 

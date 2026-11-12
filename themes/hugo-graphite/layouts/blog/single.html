@@ -41,7 +41,7 @@
           {{- end -}}
       {{ end }}
       
-      {{ $show_authors := $.Site.Params.authors.show_single | default true }}
+      {{ $show_authors := $.Site.Params.author.show_single | default true }}
       {{ if and $show_authors (or (eq .Section "articles") (eq .Section "blog")) }}
         <p style="margin-top: 0.5em;">
         <i class="fas fa-user-circle fa-fw"></i>&nbsp;
